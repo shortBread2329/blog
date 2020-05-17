@@ -1,0 +1,296 @@
+@font-face {
+    font-family: mplus-1p-regular;
+    src:url(../font/mplus-1p-regular.ttf)  format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', 'mplus-1p-regular', sans-serif;
+    font-weight: 300;
+}
+
+html, body {
+    height:100%;
+}
+
+body {
+    background-color:#fff;
+    color:#444;
+}
+
+.l-constrained {
+    width:880px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.pull-left {
+    float: left;
+    box-sizing: border-box;
+}
+.pull-right {
+    float: right;
+    box-sizing: border-box;
+}
+
+.l-constrained-large {
+    width:980px;
+    margin: 0 auto;
+}
+
+
+.separator-white {
+    height:1px;
+    width:30px;
+    margin: 60px auto;
+    background-color: #fff;
+}
+
+.l-wrapper {
+    min-height: 100%;
+}
+
+.l-header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-image: url(../img/header.png);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding:0px 0px;
+    height: 80px;
+    display: none;
+}
+
+.h-logo > .title {
+    color:#fff;
+    font-size: 26px;
+    line-height: 80px;
+}
+
+ul.menu{
+    display: table;
+    margin: 0 auto;
+    margin-top:46px;
+}
+
+ul.menu > li {
+    display: table-cell;
+    padding:0px 8px;
+}
+
+ul.menu > li > a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color:#fff;
+    text-decoration: none;
+    font-size:30px;
+    padding:16px 32px;
+    transition: background-color 0.3s;
+}
+
+ul.menu > li > a:hover{
+    background-color:rgba(123, 41, 77, 0.15);
+    box-shadow:0px 0px 3px rgba(100,100,100,0.2) inset;
+    border-radius: 3px;
+}
+ul.h-menu {
+    list-style: none;
+}
+ul.h-menu >li a{
+    color:#fff;
+    text-decoration: none;
+    height: 80px;
+    line-height: 80px;
+    display: block;
+    font-size: 20px;
+    padding:0px 24px;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+ul.h-menu > li > a:hover{
+    background-color:rgba(123, 41, 77, 0.15);
+    box-shadow:0px 0px 3px rgba(100,100,100,0.2) inset;
+}
+
+
+.l-marketing {
+    background-image: url(../img/header.png);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding:190px 0px;
+}
+
+.l-marketing h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color:#fff;
+    font-size:80px;
+    text-align: center;
+}
+
+.l-marketing p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color:#fff;
+    font-size:34px;
+    text-align: center;
+    margin-top:30px;
+}
+
+.section {
+    margin-top:40px;
+}
+.section-title {
+    text-align: center;
+    font-size:50px;
+}
+
+.section-content h1 {
+    font-size: 36px;
+    padding:8px 0px 24px 0px;
+}
+
+.subsection{
+    margin-bottom:32px;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    width:30px;
+    height:1px;
+    background-color:#ccc;
+    margin:30px auto;
+}
+
+img.icon-large {
+    width:230px;
+    border-radius: 50%;
+}
+
+.profile-icon {
+    width: 28%;
+}
+
+.profile-content {
+    width:72%;
+    padding:0px 8px;
+    line-height: 180%;
+}
+
+.section-product {
+    background-color:#eee;
+    padding:34px 0px;
+}
+
+.section-contact {
+    padding:34px 0px 80px 0px;
+    color:#fff;
+    background-color: #232323;
+}
+
+.section-contact .section-content{
+    text-align: center;
+}
+
+input.text-email {
+    background-color:#666;
+    border:solid #101010 1px;
+    border-radius:3px;
+    width:550px;
+    color:#fff;
+    font-size: 40px;
+    text-align: center;
+    padding:16px 0px;
+    outline:none;
+}
+
+ul.tech {
+    list-style: none;
+}
+ul.tech > li {
+    padding-right:24px;
+    padding-bottom:16px;
+}
+
+ul.tech li img {
+    height:60px;
+}
+
+ul.social {
+    list-style: none;
+    display: table;
+    margin: 0 auto;
+}
+
+
+ul.social >li {
+    display: table-cell;
+    padding:0px 16px;
+}
+
+ul.social > li > a{
+    color:#999;
+    text-decoration: none;
+    font-size: 40px;
+    transition: color 0.3s;
+}
+
+ul.social > li > a:hover{
+    color:#fff;
+}
+
+ul.social > li > a.facebook:hover{
+    color:rgb(136, 142, 157);
+}
+ul.social > li > a.twitter:hover{
+    color:#55ACEE;
+}
+
+ul.social > li > a.facebook:hover{
+    color:#3C599F;
+}
+
+ul.horizontal-list {
+    list-style: none;
+}
+ul.products > li{
+    width:20%;
+    padding:8px;
+}
+
+ul.products > li > a{
+    display: block;
+    height: 160px;
+    width:100%;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow:0px 0px 3px rgba(0,0,0,0.2);
+}
+.section-product {
+    display: none;
+}
+
+.product-info > li {
+    list-style: none;
+    padding:16px 8px;
+    border-bottom:solid #ccc 1px;
+}
+
+.product-info > li .field {
+    width:20%;
+}
+
+.product-info > li .description {
+    width:80%;
+}
