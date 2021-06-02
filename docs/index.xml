@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Diary</title>
+        <link>https://shortbread2329.github.io/blog/</link>
+        <description>Recent content on Diary</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Wed, 02 Jun 2021 09:34:11 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GitHubPage &#43; Hugo で最強ブログを作ろう</title>
+        <link>https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/</link>
+        <pubDate>Wed, 02 Jun 2021 09:34:11 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/</guid>
+        <description>&lt;h1 id=&#34;githubpagehugoで最強ブログを作ろう&#34;&gt;GitHubPage+Hugoで最強ブログを作ろう&lt;/h1&gt;
+&lt;p&gt;あーブログ始めないとなあ&lt;/p&gt;
+&lt;p&gt;でもちゃんと作るとサーバー維持費用かかりそうだし、&lt;/p&gt;
+&lt;p&gt;簡単に作ると多くは広告をつけることができないし、&lt;/p&gt;
+&lt;p&gt;どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！&lt;/p&gt;
+&lt;p&gt;今回のやり方であれば
+独自ドメインのブログをgithub管理で運営できそうです。&lt;/p&gt;
+&lt;p&gt;ではさっそくやり方を記事にまとめます！&lt;/p&gt;
+&lt;h2 id=&#34;導入手順&#34;&gt;導入手順&lt;/h2&gt;
+&lt;p&gt;前提の環境はWindows、gitとgoを事前にインストールしている状態です。&lt;/p&gt;
+&lt;h2 id=&#34;hugoのインストールからブログ作成まで&#34;&gt;Hugoのインストールからブログ作成まで&lt;/h2&gt;
+&lt;p&gt;PowerShellを立ち上げます。
+以下コマンドを実行してまずscoopをインストールします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Set-ExecutionPolicy&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RemoteSigned&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;iex &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;New-Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;net&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;webclient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;downloadstring&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://get.scoop.sh&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このscoopはWindows用コマンドラインインストーラーです。
+このインストーラーを使ってhugoとhugo-extendedをインストールします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;n&#34;&gt;scoop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hugo&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;scoop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;hugo-extended&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hugoとは&#34;&gt;Hugoとは&lt;/h2&gt;
+&lt;p&gt;ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。
+同じ用途のサービスとしてWordPressが有名かと思います。
+違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、
+Hugoは静的サイト、事前に作成した&lt;strong&gt;テンプレートデザイン&lt;/strong&gt;に従ったサイトができます。
+例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;本体
+ ├── 設定ファイル
+ ├── マークダウンで書いた記事①
+ └── 公開用ファイル③
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;コマンドを実行②
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;hugoのテンプレートデザイン&#34;&gt;Hugoのテンプレートデザイン&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://themes.gohugo.io&#34;&gt;https://themes.gohugo.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今回はFuji&lt;/p&gt;
+&lt;h2 id=&#34;プロジェクト作成&#34;&gt;プロジェクト作成&lt;/h2&gt;
+&lt;p&gt;ワークディレクトリにて以下のコマンドを実行するだけです。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new site blog
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;この時点でGithubの設定も行います。
+先に、GitHub上で空のリポジトリ(ここでは &lt;code&gt;blog&lt;/code&gt;)を作り、リモートURL登録をします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; blog
+$ git init
+$ git remote add origin https://github.com/shortBread2329/blog.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;テーマをsubmoduleで登録&#34;&gt;テーマをSubmoduleで登録&lt;/h2&gt;
+&lt;p&gt;git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。&lt;/p&gt;
+&lt;p&gt;このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim
+$ git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定ファイル書き換え&#34;&gt;設定ファイル書き換え&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

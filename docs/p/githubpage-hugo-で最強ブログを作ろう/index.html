@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GitHubPage&#43;Hugoで最強ブログを作ろう あーブログ始めないとなあ
+でもちゃんと作るとサーバー維持費用かかりそうだし、
+簡単に作ると多くは広告をつけることができないし、
+どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！
+今回のやり方であれば 独自ドメインのブログをgithub管理で運営できそうです。
+ではさっそくやり方を記事にまとめます！
+導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
+今回はFuji
+プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
+hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
+$ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
+このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。
+$ git submodule add https://github.'><title>GitHubPage &#43; Hugo で最強ブログを作ろう</title>
+
+<link rel='canonical' href='https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.css"><meta property='og:title' content='GitHubPage &#43; Hugo で最強ブログを作ろう'>
+<meta property='og:description' content='GitHubPage&#43;Hugoで最強ブログを作ろう あーブログ始めないとなあ
+でもちゃんと作るとサーバー維持費用かかりそうだし、
+簡単に作ると多くは広告をつけることができないし、
+どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！
+今回のやり方であれば 独自ドメインのブログをgithub管理で運営できそうです。
+ではさっそくやり方を記事にまとめます！
+導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
+今回はFuji
+プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
+hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
+$ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
+このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。
+$ git submodule add https://github.'>
+<meta property='og:url' content='https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/'>
+<meta property='og:site_name' content='Diary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='github' /><meta property='article:published_time' content='2021-06-02T09:34:11&#43;09:00'/><meta property='article:modified_time' content='2021-06-02T09:34:11&#43;09:00'/>
+<meta name="twitter:title" content="GitHubPage &#43; Hugo で最強ブログを作ろう">
+<meta name="twitter:description" content="GitHubPage&#43;Hugoで最強ブログを作ろう あーブログ始めないとなあ
+でもちゃんと作るとサーバー維持費用かかりそうだし、
+簡単に作ると多くは広告をつけることができないし、
+どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！
+今回のやり方であれば 独自ドメインのブログをgithub管理で運営できそうです。
+ではさっそくやり方を記事にまとめます！
+導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
+今回はFuji
+プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
+hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
+$ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
+このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。
+$ git submodule add https://github."><style>
+        
+    :root {
+        --article-font-family: "Yu Gothic", var(--base-font-family);
+    }
+</style>
+
+<script>
+        (function () {
+            const customFont = document.createElement('link');
+            customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+
+            customFont.type = "text/css";
+            customFont.rel = "stylesheet";
+
+            document.head.appendChild(customFont);
+        }());
+</script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://shortbread2329.github.io/blog/">Diary</a></h1>
+        <h2 class="site-description">ようこそ</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/blog/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>ホーム</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>自己紹介</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>ダークモード</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://shortbread2329.github.io/blog/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/programing/" style="background-color: #2a9d8f; color: #fff;">
+                プログラミング
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/">GitHubPage &#43; Hugo で最強ブログを作ろう</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jun 02, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="githubpagehugoで最強ブログを作ろう">GitHubPage+Hugoで最強ブログを作ろう</h1>
+<p>あーブログ始めないとなあ</p>
+<p>でもちゃんと作るとサーバー維持費用かかりそうだし、</p>
+<p>簡単に作ると多くは広告をつけることができないし、</p>
+<p>どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！</p>
+<p>今回のやり方であれば
+独自ドメインのブログをgithub管理で運営できそうです。</p>
+<p>ではさっそくやり方を記事にまとめます！</p>
+<h2 id="導入手順">導入手順</h2>
+<p>前提の環境はWindows、gitとgoを事前にインストールしている状態です。</p>
+<h2 id="hugoのインストールからブログ作成まで">Hugoのインストールからブログ作成まで</h2>
+<p>PowerShellを立ち上げます。
+以下コマンドを実行してまずscoopをインストールします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
+<span class="nb">iex </span><span class="p">(</span><span class="nb">New-Object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="n">downloadstring</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
+</code></pre></div><p>このscoopはWindows用コマンドラインインストーラーです。
+このインストーラーを使ってhugoとhugo-extendedをインストールします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">scoop</span> <span class="n">install</span> <span class="n">hugo</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="nb">hugo-extended</span>
+</code></pre></div><h2 id="hugoとは">Hugoとは</h2>
+<p>ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。
+同じ用途のサービスとしてWordPressが有名かと思います。
+違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、
+Hugoは静的サイト、事前に作成した<strong>テンプレートデザイン</strong>に従ったサイトができます。
+例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。</p>
+<pre><code>本体
+ ├── 設定ファイル
+ ├── マークダウンで書いた記事①
+ └── 公開用ファイル③
+</code></pre><pre><code>コマンドを実行②
+</code></pre><h2 id="hugoのテンプレートデザイン">Hugoのテンプレートデザイン</h2>
+<p><a href="https://themes.gohugo.io">https://themes.gohugo.io</a></p>
+<p>今回はFuji</p>
+<h2 id="プロジェクト作成">プロジェクト作成</h2>
+<p>ワークディレクトリにて以下のコマンドを実行するだけです。</p>
+<pre><code>hugo new site blog
+</code></pre><p>この時点でGithubの設定も行います。
+先に、GitHub上で空のリポジトリ(ここでは <code>blog</code>)を作り、リモートURL登録をします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> blog
+$ git init
+$ git remote add origin https://github.com/shortBread2329/blog.git
+</code></pre></div><h2 id="テーマをsubmoduleで登録">テーマをSubmoduleで登録</h2>
+<p>git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。</p>
+<p>このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim
+$ git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+</code></pre></div><h2 id="設定ファイル書き換え">設定ファイル書き換え</h2>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/markdown/">markdown</a>
+        
+            <a href="/blog/tags/hugo/">hugo</a>
+        
+            <a href="/blog/tags/github/">github</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed shortBread2329</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Diary
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>プログラミング on Diary</title>
+    <link>https://example.com/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
+    <description>Recent content in プログラミング on Diary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Jun 2021 09:34:11 +0900</lastBuildDate><atom:link href="https://example.com/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHubPage &#43; Hugo で最強ブログを作ろう</title>
+      <link>https://example.com/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/</link>
+      <pubDate>Wed, 02 Jun 2021 09:34:11 +0900</pubDate>
+      
+      <guid>https://example.com/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/</guid>
+      <description>GitHubPage+Hugoで最強ブログを作ろう 背景 独自ドメインのブログを手軽な管理で運営したいと思ってました。
+導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
+今回はFuji
+プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
+hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
+$ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
+このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。
+$ git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim $ git submodule add https://github.</description>
+    </item>
+    
+  </channel>
+</rss>
