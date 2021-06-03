@@ -5,7 +5,7 @@ paginate: 5
 title: むーさんDiary
 publishDir: "docs"
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: musan
 
 # GA Tracking ID
 googleAnalytics:
@@ -82,7 +82,7 @@ params:
     opengraph:
         twitter:
             # Your Twitter username
-            site:
+            site: https://twitter.com/musan_free
 
             # Available values: summary, summary_large_image
             card: summary_large_image
