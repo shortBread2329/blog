@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Diary</title>
+    <title>Categories on むーさんDiary</title>
     <link>https://shortbread2329.github.io/blog/categories/</link>
-    <description>Recent content in Categories on Diary</description>
+    <description>Recent content in Categories on むーさんDiary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 02 Jun 2021 09:34:11 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Jun 2021 17:44:52 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>雑記</title>
+      <link>https://shortbread2329.github.io/blog/categories/zakki/</link>
+      <pubDate>Wed, 02 Jun 2021 17:44:52 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/categories/zakki/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>プログラミング</title>
       <link>https://shortbread2329.github.io/blog/categories/programing/</link>

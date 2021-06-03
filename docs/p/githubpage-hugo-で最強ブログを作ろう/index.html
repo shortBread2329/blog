@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GitHubPage&#43;Hugoで最強ブログを作ろう あーブログ始めないとなあ
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GitHubPage&#43;Hugoで最強ブログを作ろう(1/3) あーブログ始めないとなあ
 でもちゃんと作るとサーバー維持費用かかりそうだし、
 簡単に作ると多くは広告をつけることができないし、
 どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！
-今回のやり方であれば 独自ドメインのブログをgithub管理で運営できそうです。
+今回のやり方であれば
+独自ドメインのブログをgithub管理で運営できそうです。
 ではさっそくやり方を記事にまとめます！
 導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
-Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。
+以下コマンドを実行してまずscoopをインストールします。
 Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
-scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。
+同じ用途のサービスとしてWordPressが有名かと思います。
+違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、
+Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。
+例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
 本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
-今回はFuji
+今回はhugo-future-imperfect-slimを使用しています。
 プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
 hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
 $ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
@@ -22,39 +28,51 @@ $ git submodule add https://github.'><title>GitHubPage &#43; Hugo で最強ブ�
 <link rel='canonical' href='https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/'>
 
 <link rel="stylesheet" href="/blog/scss/style.min.css"><meta property='og:title' content='GitHubPage &#43; Hugo で最強ブログを作ろう'>
-<meta property='og:description' content='GitHubPage&#43;Hugoで最強ブログを作ろう あーブログ始めないとなあ
+<meta property='og:description' content='GitHubPage&#43;Hugoで最強ブログを作ろう(1/3) あーブログ始めないとなあ
 でもちゃんと作るとサーバー維持費用かかりそうだし、
 簡単に作ると多くは広告をつけることができないし、
 どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！
-今回のやり方であれば 独自ドメインのブログをgithub管理で運営できそうです。
+今回のやり方であれば
+独自ドメインのブログをgithub管理で運営できそうです。
 ではさっそくやり方を記事にまとめます！
 導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
-Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。
+以下コマンドを実行してまずscoopをインストールします。
 Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
-scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。
+同じ用途のサービスとしてWordPressが有名かと思います。
+違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、
+Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。
+例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
 本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
-今回はFuji
+今回はhugo-future-imperfect-slimを使用しています。
 プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
 hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
 $ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
 このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。
 $ git submodule add https://github.'>
 <meta property='og:url' content='https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/'>
-<meta property='og:site_name' content='Diary'>
+<meta property='og:site_name' content='むーさんDiary'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='github' /><meta property='article:published_time' content='2021-06-02T09:34:11&#43;09:00'/><meta property='article:modified_time' content='2021-06-02T09:34:11&#43;09:00'/>
 <meta name="twitter:title" content="GitHubPage &#43; Hugo で最強ブログを作ろう">
-<meta name="twitter:description" content="GitHubPage&#43;Hugoで最強ブログを作ろう あーブログ始めないとなあ
+<meta name="twitter:description" content="GitHubPage&#43;Hugoで最強ブログを作ろう(1/3) あーブログ始めないとなあ
 でもちゃんと作るとサーバー維持費用かかりそうだし、
 簡単に作ると多くは広告をつけることができないし、
 どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！
-今回のやり方であれば 独自ドメインのブログをgithub管理で運営できそうです。
+今回のやり方であれば
+独自ドメインのブログをgithub管理で運営できそうです。
 ではさっそくやり方を記事にまとめます！
 導入手順 前提の環境はWindows、gitとgoを事前にインストールしている状態です。
-Hugoのインストールからブログ作成まで PowerShellを立ち上げます。 以下コマンドを実行してまずscoopをインストールします。
+Hugoのインストールからブログ作成まで PowerShellを立ち上げます。
+以下コマンドを実行してまずscoopをインストールします。
 Set-ExecutionPolicy RemoteSigned iex (New-Object net.webclient).downloadstring(&amp;#39;https://get.scoop.sh&amp;#39;) このscoopはWindows用コマンドラインインストーラーです。 このインストーラーを使ってhugoとhugo-extendedをインストールします。
-scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。 同じ用途のサービスとしてWordPressが有名かと思います。 違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、 Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
+scoop install hugo scoop install hugo-extended Hugoとは ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。
+同じ用途のサービスとしてWordPressが有名かと思います。
+違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、
+Hugoは静的サイト、事前に作成したテンプレートデザインに従ったサイトができます。
+例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。
 本体 ├── 設定ファイル ├── マークダウンで書いた記事① └── 公開用ファイル③ コマンドを実行② Hugoのテンプレートデザイン https://themes.gohugo.io
-今回はFuji
+今回はhugo-future-imperfect-slimを使用しています。
 プロジェクト作成 ワークディレクトリにて以下のコマンドを実行するだけです。
 hugo new site blog この時点でGithubの設定も行います。 先に、GitHub上で空のリポジトリ(ここでは blog)を作り、リモートURL登録をします。
 $ cd blog $ git init $ git remote add origin https://github.com/shortBread2329/blog.git テーマをSubmoduleで登録 git submoduleコマンドを使うことで、外部のgitリポジトリを自分のgitリポジトリのサブディレクトリに登録できます。
@@ -116,18 +134,16 @@ $ git submodule add https://github."><style>
                     
                     
                         
-                        <img src="/blog/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_2.png" width="300"
+                        <img src="/blog/img/doraemon_hu43cec17023671785a76c5dde11ef1ccf_3208_300x0_resize_box_2.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
 
                 
-                    <span class="emoji">🍥</span>
-                
             </figure>
         
-        <h1 class="site-name"><a href="https://shortbread2329.github.io/blog/">Diary</a></h1>
-        <h2 class="site-description">ようこそ</h2>
+        <h1 class="site-name"><a href="https://shortbread2329.github.io/blog/">むーさんDiary</a></h1>
+        <h2 class="site-description">プログラミングや一人暮らし向け料理やお菓子作りを中心としたブログを載せていきます。</h2>
     </header>
 
     <ol class="menu" id="main-menu">
@@ -278,18 +294,18 @@ $ git submodule add https://github."><style>
 </header>
 
     <section class="article-content">
-    <h1 id="githubpagehugoで最強ブログを作ろう">GitHubPage+Hugoで最強ブログを作ろう</h1>
-<p>あーブログ始めないとなあ</p>
-<p>でもちゃんと作るとサーバー維持費用かかりそうだし、</p>
-<p>簡単に作ると多くは広告をつけることができないし、</p>
-<p>どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！</p>
-<p>今回のやり方であれば
-独自ドメインのブログをgithub管理で運営できそうです。</p>
-<p>ではさっそくやり方を記事にまとめます！</p>
+    <h1 id="githubpagehugoで最強ブログを作ろう13">GitHubPage+Hugoで最強ブログを作ろう(1/3)</h1>
+<p>あーブログ始めないとなあ<br>
+でもちゃんと作るとサーバー維持費用かかりそうだし、<br>
+簡単に作ると多くは広告をつけることができないし、<br>
+どうすればいいんだろうなあと考えていた時にいいやり方を見つけました！<br>
+今回のやり方であれば<br>
+独自ドメインのブログをgithub管理で運営できそうです。<br>
+ではさっそくやり方を記事にまとめます！</p>
 <h2 id="導入手順">導入手順</h2>
 <p>前提の環境はWindows、gitとgoを事前にインストールしている状態です。</p>
 <h2 id="hugoのインストールからブログ作成まで">Hugoのインストールからブログ作成まで</h2>
-<p>PowerShellを立ち上げます。
+<p>PowerShellを立ち上げます。<br>
 以下コマンドを実行してまずscoopをインストールします。</p>
 <div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
 <span class="nb">iex </span><span class="p">(</span><span class="nb">New-Object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="n">downloadstring</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
@@ -298,10 +314,10 @@ $ git submodule add https://github."><style>
 <div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">scoop</span> <span class="n">install</span> <span class="n">hugo</span>
 <span class="n">scoop</span> <span class="n">install</span> <span class="nb">hugo-extended</span>
 </code></pre></div><h2 id="hugoとは">Hugoとは</h2>
-<p>ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。
-同じ用途のサービスとしてWordPressが有名かと思います。
-違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、
-Hugoは静的サイト、事前に作成した<strong>テンプレートデザイン</strong>に従ったサイトができます。
+<p>ざっくりいうと、レイアウトがある程度整ったサイトをすぐに作れるやつです。<br>
+同じ用途のサービスとしてWordPressが有名かと思います。<br>
+違いは動的サイト、自由度の高いサイトがWordPressでできる点に対し、<br>
+Hugoは静的サイト、事前に作成した<strong>テンプレートデザイン</strong>に従ったサイトができます。<br>
 例えばブログであればマークダウンファイルを配置しコマンドを実行すると公開用ファイルが生成されます。</p>
 <pre><code>本体
  ├── 設定ファイル
@@ -310,7 +326,7 @@ Hugoは静的サイト、事前に作成した<strong>テンプレートデザ�
 </code></pre><pre><code>コマンドを実行②
 </code></pre><h2 id="hugoのテンプレートデザイン">Hugoのテンプレートデザイン</h2>
 <p><a href="https://themes.gohugo.io">https://themes.gohugo.io</a></p>
-<p>今回はFuji</p>
+<p>今回はhugo-future-imperfect-slimを使用しています。</p>
 <h2 id="プロジェクト作成">プロジェクト作成</h2>
 <p>ワークディレクトリにて以下のコマンドを実行するだけです。</p>
 <pre><code>hugo new site blog
@@ -324,7 +340,7 @@ $ git remote add origin https://github.com/shortBread2329/blog.git
 <p>このコマンドを使うことで、テンプレートデザインをダウンロードすることなく、githubから参照させることができます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim
 $ git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
-</code></pre></div><h2 id="設定ファイル書き換え">設定ファイル書き換え</h2>
+</code></pre></div><h2 id="次回はテーマの設定の続きを記事にします乞うご期待">次回はテーマの設定の続きを記事にします。乞うご期待</h2>
 
 </section>
 
@@ -417,7 +433,7 @@ $ git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-th
         
             2020 - 
         
-        2021 Diary
+        2021 むーさんDiary
     </section>
     
     <section class="powerby">
