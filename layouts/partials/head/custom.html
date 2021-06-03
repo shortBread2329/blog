@@ -1,15 +1,17 @@
 <style>
         /// Overwrite CSS variable
     :root {
-        --base-font-family: "Yu Gothic", var(--sys-font-family), var(--zh-font-family), sans-serif;
+        
+        --base-font-family: "Noto Sans JP", var(--sys-font-family), var(--zh-font-family), sans-serif;
     }
 </style>
 
 <script>
         (function () {
             const customFont = document.createElement('link');
-            customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
-
+            //customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+            //customFont.href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap";
+            customFont.href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap";
             customFont.type = "text/css";
             customFont.rel = "stylesheet";
 
