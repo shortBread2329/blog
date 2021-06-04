@@ -5,7 +5,7 @@ paginate: 5
 title: むーさんDiary
 publishDir: "docs"
 # Change it to your Disqus shortname before using
-disqusShortname: blog-otiu1ubwtc
+disqusShortname: "blog-otiu1ubwtc"
 
 # GA Tracking ID
 googleAnalytics:
