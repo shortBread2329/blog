@@ -5,7 +5,7 @@ paginate: 5
 title: むーさんDiary
 publishDir: "docs"
 # Change it to your Disqus shortname before using
-disqusShortname: musan
+disqusShortname: musan_free
 
 # GA Tracking ID
 googleAnalytics:
@@ -44,7 +44,7 @@ params:
         math: false
         license:
             enabled: true
-            default: Licensed shortBread2329
+            default: Licensed musan
 
     comments:
         enabled: true
