@@ -7,6 +7,7 @@ categories : [
 tags : [
     "DMMWebCamp",
 ]
+draft : true
 
 ---
 
