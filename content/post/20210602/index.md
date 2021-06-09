@@ -1,5 +1,5 @@
 ﻿---
-title: "GitHubPage + Hugo で最強ブログを作ろう"
+title: "GitHubPage + Hugo で最強ブログを作ろう(1/3)"
 date: 2021-06-02T09:34:11+09:00
 categories : [
     programing,
@@ -11,8 +11,6 @@ tags : [
 ]
 
 ---
-# GitHubPage+Hugoで最強ブログを作ろう(1/3)
-
 あーブログ始めないとなあ  
 でもちゃんと作るとサーバー維持費用かかりそうだし、  
 簡単に作ると多くは広告をつけることができないし、  
