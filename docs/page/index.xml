@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on むーさんDiary</title>
+    <link>https://shortbread2329.github.io/blog/page/</link>
+    <description>Recent content in Pages on むーさんDiary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 02 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アーカイブ</title>
+      <link>https://shortbread2329.github.io/blog/archives/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自己紹介</title>
+      <link>https://shortbread2329.github.io/blog/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B/</guid>
+      <description>   名前 むーさん     twitter https://twitter.com/musan_free   Github https://github.com/shortBread2329   ココナラ -    </description>
+    </item>
+    
+    <item>
+      <title>検索</title>
+      <link>https://shortbread2329.github.io/blog/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
