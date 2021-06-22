@@ -6,7 +6,26 @@
     <description>Recent content in markdown on むーさんDiary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 02 Jun 2021 09:34:11 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 09:58:59 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typora_マークダウンエディタ</title>
+      <link>https://shortbread2329.github.io/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/</link>
+      <pubDate>Tue, 22 Jun 2021 09:58:59 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/</guid>
+      <description>今回は無料の強力なMarkdowエディタ「Typora」について記事にします。
+TyporaはMarkdownエディタとして比較的敷居も低く、便利機能もたくさん存在するため、
+初心者から上級者までお勧めができるエディタです。
+ Typoraの特徴  Win、Mac、Linuxで導入可能。 Typoraは常時シームレスにプレビューが可能なので、どのような表示になるのか確認しながら直感的に記述をすることが可能。 画像をドラックアンドドロップで楽々挿入 簡単なシーケンス図を作成可能。   環境要件 TyporaはWindows,Mac,Linux環境で動作します。
+詳しくはインストールの手順中リンクを参照してください。
+ インストール https://typora.io
+ 使い心地 このブログ記事もTyporaで書いてます。
+image-20210622104125318
+なによりプレビュー画面と編集画面が一つでよい点が
+本当に使い心地よいです！！
+皆さんもぜひ使ってみてください。</description>
+    </item>
+    
     <item>
       <title>GitHubPage &#43; Hugo で最強ブログを作ろう(1/3)</title>
       <link>https://shortbread2329.github.io/blog/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%861/3/</link>

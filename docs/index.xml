@@ -6,7 +6,72 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Sat, 19 Jun 2021 00:14:59 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 22 Jun 2021 09:58:59 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Typora_マークダウンエディタ</title>
+        <link>https://shortbread2329.github.io/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/</link>
+        <pubDate>Tue, 22 Jun 2021 09:58:59 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/</guid>
+        <description>&lt;p&gt;今回は無料の強力なMarkdowエディタ「Typora」について記事にします。&lt;/p&gt;
+&lt;p&gt;TyporaはMarkdownエディタとして比較的敷居も低く、便利機能もたくさん存在するため、&lt;/p&gt;
+&lt;p&gt;初心者から上級者までお勧めができるエディタです。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;typoraの特徴&#34;&gt;Typoraの特徴&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Win、Mac、Linuxで導入可能。&lt;/li&gt;
+&lt;li&gt;Typoraは常時シームレスにプレビューが可能なので、どのような表示になるのか確認しながら直感的に記述をすることが可能。&lt;/li&gt;
+&lt;li&gt;画像をドラックアンドドロップで楽々挿入&lt;/li&gt;
+&lt;li&gt;簡単なシーケンス図を作成可能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;環境要件&#34;&gt;環境要件&lt;/h1&gt;
+&lt;p&gt;TyporaはWindows,Mac,Linux環境で動作します。&lt;/p&gt;
+&lt;p&gt;詳しくはインストールの手順中リンクを参照してください。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;インストール&#34;&gt;インストール&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://typora.io&#34;&gt;https://typora.io&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;使い心地&#34;&gt;使い心地&lt;/h1&gt;
+&lt;p&gt;このブログ記事もTyporaで書いてます。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 119; flex-basis: 286px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/image-20210622104125318.png&#34; data-size=&#34;1287x1080&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/image-20210622104125318.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/image-20210622104125318_hu3fb6dda27622f9023e060a9a09dff967_122647_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/typora_%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/image-20210622104125318_hu3fb6dda27622f9023e060a9a09dff967_122647_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1287&#34;
+				height=&#34;1080&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210622104125318&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210622104125318&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;なにより&lt;strong&gt;プレビュー画面と編集画面が一つでよい&lt;/strong&gt;点が&lt;/p&gt;
+&lt;p&gt;本当に使い心地よいです！！&lt;/p&gt;
+&lt;p&gt;皆さんもぜひ使ってみてください。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>microSDが急に死んで困ったので復旧した話</title>
+        <link>https://shortbread2329.github.io/blog/p/microsd%E3%81%8C%E6%80%A5%E3%81%AB%E6%AD%BB%E3%82%93%E3%81%A7%E5%9B%B0%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7%E5%BE%A9%E6%97%A7%E3%81%97%E3%81%9F%E8%A9%B1/</link>
+        <pubDate>Sun, 20 Jun 2021 10:02:06 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/microsd%E3%81%8C%E6%80%A5%E3%81%AB%E6%AD%BB%E3%82%93%E3%81%A7%E5%9B%B0%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7%E5%BE%A9%E6%97%A7%E3%81%97%E3%81%9F%E8%A9%B1/</guid>
+        <description>&lt;p&gt;私のノートパソコンは128GBのSSDのみの搭載です。&lt;/p&gt;
+&lt;p&gt;ちょっとWindowsPCとしては容量が不安ですよね。&lt;/p&gt;
+&lt;p&gt;なので128GのmicroSDを刺してデータはそちらに全部入れてた結果、&lt;/p&gt;
+&lt;p&gt;ある日突然microSDが読まれず「フォーマットしますか？」と。&lt;/p&gt;
+&lt;p&gt;というわけであわてて復旧作業してましたので記事にしてみます。&lt;/p&gt;
+&lt;h1 id=&#34;やり方&#34;&gt;やり方&lt;/h1&gt;
+&lt;p&gt;どうやら無料ソフトを使うパターンと有料ソフトを使うやり方があるみたいです。&lt;/p&gt;
+&lt;p&gt;今回はこちらの「EaseUS」を使用します。&lt;/p&gt;
+&lt;p&gt;世界的に有名? なデータ復旧ソフトみたいです。&lt;/p&gt;
+&lt;p&gt;無料版と有料版がありますが、無料版をダウンロードします。&lt;/p&gt;
+&lt;h2 id=&#34;easeus-data-recovery-wizard-free&#34;&gt;EaseUS Data Recovery Wizard Free&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://jp.easeus.com/data-recovery-software/drw-free.html&#34;&gt;https://jp.easeus.com/data-recovery-software/drw-free.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;無料ダウンロードをクリックします。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>ラピュタ風トースト</title>
         <link>https://shortbread2329.github.io/blog/p/%E3%83%A9%E3%83%94%E3%83%A5%E3%82%BF%E9%A2%A8%E3%83%88%E3%83%BC%E3%82%B9%E3%83%88/</link>
         <pubDate>Sat, 19 Jun 2021 00:14:59 +0900</pubDate>
