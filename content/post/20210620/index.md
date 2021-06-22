@@ -9,6 +9,7 @@ tags : [
     "microSD",
     "復旧"
 ]
+draft: true
 ---
 
 私のノートパソコンは128GBのSSDのみの搭載です。
