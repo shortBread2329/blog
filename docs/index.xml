@@ -6,7 +6,325 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Tue, 22 Jun 2021 15:42:56 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Jul 2021 00:10:12 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ローストポーク</title>
+        <link>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9D%E3%83%BC%E3%82%AF/</link>
+        <pubDate>Fri, 02 Jul 2021 00:10:12 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9D%E3%83%BC%E3%82%AF/</guid>
+        <description>&lt;img src="https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9D%E3%83%BC%E3%82%AF/2021-07-02-12-47-46-593.jpg" alt="Featured image of post ローストポーク" /&gt;&lt;p&gt;暑くなってきましたが、サラダでもいただけて、&lt;/p&gt;
+&lt;p&gt;比較的ローストビーフよりお安くさっぱりいただける&lt;/p&gt;
+&lt;p&gt;ローストポークを作ってみてはいかがでしょうか！？&lt;/p&gt;
+&lt;h1 id=&#34;作り方&#34;&gt;作り方&lt;/h1&gt;
+&lt;h2 id=&#34;まずジップロックに以下材料を入れ漬け込みます&#34;&gt;まずジップロックに以下材料を入れ漬け込みます。&lt;/h2&gt;
+&lt;p&gt;空気を抜いて閉めます。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;材料&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;豚ブロック肉　目安400g前後&lt;/li&gt;
+&lt;li&gt;粗塩　気持ち多め&lt;/li&gt;
+&lt;li&gt;砂糖　大匙2&lt;/li&gt;
+&lt;li&gt;ローズマリーみじん切り　適量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;機材&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ジップロック&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;低温調理器にお水を張り65度で2時間調理します&#34;&gt;低温調理器にお水を張り、65度で2時間調理します。&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;機材&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;電気圧力鍋&lt;/p&gt;
+&lt;p&gt;(今回はこちらを使用しました。https://www.t-fal.co.jp/products/electric-pressurecookers/manual-cooking/lakulacookercompact/)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まな板ので薄くスライスしお好みでドレッシングや野菜を添えて完成です&#34;&gt;まな板ので薄くスライスし、お好みでドレッシングや野菜を添えて完成です。&lt;/h2&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;材料&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;玉ねぎドレッシング&lt;/li&gt;
+&lt;li&gt;市販の大根サラダ&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>AWSでWebサーバーを立てよう</title>
+        <link>https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</link>
+        <pubDate>Fri, 25 Jun 2021 08:23:29 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</guid>
+        <description>&lt;p&gt;今ポートフォリオを作成しているんですけど、&lt;/p&gt;
+&lt;p&gt;EC2でWebサーバーを立ててきました。&lt;/p&gt;
+&lt;p&gt;その時のメモを記事にします。&lt;/p&gt;
+&lt;h1 id=&#34;ec2とは&#34;&gt;EC2とは&lt;/h1&gt;
+&lt;p&gt;AWSのサービスの1つで、「EC2（Amazon Elastic Compute Cloud）」は、AWSが提供する仮想サーバーです。読みは「&lt;strong&gt;イーシーツー&lt;/strong&gt;」でいいみたいです。&lt;/p&gt;
+&lt;p&gt;EC2は無料枠があります。&lt;/p&gt;
+&lt;h1 id=&#34;ec2でwebサーバーを作成する&#34;&gt;EC2でWebサーバーを作成する&lt;/h1&gt;
+&lt;p&gt;それでは、実際にEC2でWebサーバーを作って試してみましょう。
+以下の手順で行います。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;EC2インスタンスを作成する&lt;/li&gt;
+&lt;li&gt;EC2にログインする&lt;/li&gt;
+&lt;li&gt;EC2インスタンスの環境構築&lt;/li&gt;
+&lt;li&gt;サーバーに「Nginx」をインストールする&lt;/li&gt;
+&lt;li&gt;ブラウザからWebサーバーにアクセスする&lt;/li&gt;
+&lt;li&gt;Nginx用のHTMLを作成する&lt;/li&gt;
+&lt;li&gt;サーバーを停止する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;ec2インスタンスを作成する&#34;&gt;EC2インスタンスを作成する&lt;/h1&gt;
+&lt;p&gt;AWSにアクセスし、マネジメントコンソールのサービス検索で「&lt;strong&gt;EC2&lt;/strong&gt;」を検索&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 315; flex-basis: 756px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607.png&#34; data-size=&#34;1097x348&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607_hua70464efcb1b44fd30499b8d26623af0_53084_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607_hua70464efcb1b44fd30499b8d26623af0_53084_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1097&#34;
+				height=&#34;348&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085046607&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085046607&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【注意】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;サインアップが完了してから利用できるようになるまで、24時間ほどかかる場合があります。
+この場合、「サービスへのお申し込みはあと少しで完了です！」画面が表示されます。
+「AWSへの登録を完了してください」をクリックして登録を完了し、「クレジットカード情報」をクリックして情報を確認しておきましょう。&lt;/p&gt;
+&lt;p&gt;EC2にアクセスされると、「EC2ダッシュボード」画面が表示されます。
+左下の「インスタンスを起動」をクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 310; flex-basis: 744px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485.png&#34; data-size=&#34;1098x354&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485_hu68bf01adb74fc04bd4a77956324bffce_116309_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485_hu68bf01adb74fc04bd4a77956324bffce_116309_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1098&#34;
+				height=&#34;354&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085131485&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085131485&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Amazon マシンイメージにはAmazon Linux 2 AMIを選択します。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 397; flex-basis: 953px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185.png&#34; data-size=&#34;1109x279&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185_hu18e271256fac9c626574edc1f4e68118_128245_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185_hu18e271256fac9c626574edc1f4e68118_128245_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1109&#34;
+				height=&#34;279&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085202185&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085202185&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「2. インスタンスタイプの選択」画面が表示されます。&lt;/p&gt;
+&lt;p&gt;「6.セキュリティグループの設定」をクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 895; flex-basis: 2150px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142.png&#34; data-size=&#34;1093x122&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142_hu56715e7297b8f96d14cf7c02abd7c237_76710_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142_hu56715e7297b8f96d14cf7c02abd7c237_76710_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1093&#34;
+				height=&#34;122&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085350142&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085350142&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「6. セキュリティグループの設定」画面が表示されます。&lt;/p&gt;
+&lt;p&gt;左下の「ルールの追加」をクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 263; flex-basis: 632px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347.png&#34; data-size=&#34;1104x419&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347_huc265fd2c7610760d0303954a66ecad31_158013_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347_huc265fd2c7610760d0303954a66ecad31_158013_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1104&#34;
+				height=&#34;419&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085451347&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085451347&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「ルールの追加」をクリックすると、その下に行が追加されます。&lt;/p&gt;
+&lt;p&gt;追加行の「タイプ」で「カスタムTCP」をクリックし、表示されるメニューで「&lt;strong&gt;HTTP&lt;/strong&gt;」を選択します。&lt;/p&gt;
+&lt;p&gt;設定できたら、右下の「確認と作成」をクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 290; flex-basis: 697px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944.png&#34; data-size=&#34;1101x379&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944_hu4780ee8754ccbec73b41fcbc634bcc67_141214_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944_hu4780ee8754ccbec73b41fcbc634bcc67_141214_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1101&#34;
+				height=&#34;379&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085620944&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085620944&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「7. 確認」画面が表示されます。
+正しく設定されていることを確認し、よければ右下の「起動」をクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 210; flex-basis: 506px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864.png&#34; data-size=&#34;1095x519&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864_hu2c9d3f3925bdf1be210428ff6f78f0c0_196515_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864_hu2c9d3f3925bdf1be210428ff6f78f0c0_196515_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1095&#34;
+				height=&#34;519&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085643864&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085643864&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「既存のキーペアを作成するか、新しいキーペアを作成します」画面が表示されます。&lt;/p&gt;
+&lt;p&gt;「既存のキーペアの選択」のメニューで「新しいキーペアを作成」を選択し直します。&lt;/p&gt;
+&lt;p&gt;「キーペア名」欄に好きなキーの名前入力し、右下の「キーペアのダウンロード」をクリックします。&lt;/p&gt;
+&lt;p&gt;キーペアをダウンロードする画面が表示されるので、ダウンロードします。
+ダウンロードが終わったら、「インスタンスの作成」をクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 233; flex-basis: 559px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354.png&#34; data-size=&#34;1080x463&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354_hu8977c6f6aa47c6cb6e340f0d97f5c606_121589_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354_hu8977c6f6aa47c6cb6e340f0d97f5c606_121589_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1080&#34;
+				height=&#34;463&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625085730354&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625085730354&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「作成ステータス」画面が表示されます。&lt;/p&gt;
+&lt;p&gt;「インスタンスは現在作成中です」の右側にある番号（インスタンスID）をクリックします。&lt;/p&gt;
+&lt;p&gt;「パブリックIPv4アドレス」のアドレスをコピーしておきます。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 702; flex-basis: 1686px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298.png&#34; data-size=&#34;1813x258&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298_hu551c7da2a60ea3fa9ea6d8f125d118c3_61475_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298_hu551c7da2a60ea3fa9ea6d8f125d118c3_61475_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1813&#34;
+				height=&#34;258&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625122734298&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625122734298&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ec2にログインする&#34;&gt;EC2にログインする&lt;/h1&gt;
+&lt;p&gt;ローカルコマンドラインから以下を入力します。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh -i キーパス ユーザ名(ec2-user)@コピーしたアドレス&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 385; flex-basis: 924px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159.png&#34; data-size=&#34;832x216&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159_hu0684a85f2b1051a42712d61378b544d4_6521_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/blog/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159_hu0684a85f2b1051a42712d61378b544d4_6521_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;832&#34;
+				height=&#34;216&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210625124602159&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210625124602159&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ec2インスタンスの環境構築&#34;&gt;EC2インスタンスの環境構築&lt;/h1&gt;
+&lt;p&gt;パッケージのバージョンを管理するにはyumコマンドを使います。&lt;/p&gt;
+&lt;p&gt;まずはyumコマンドでパッケージをアップデートします。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo yum update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;必要なパッケージをインストールします。&lt;/p&gt;
+&lt;p&gt;Amazon LInuxは初期状態だと必要最低限のパッケージしか入っていません。&lt;/p&gt;
+&lt;p&gt;なのでよく利用するパッケージをインストールしていきます。&lt;/p&gt;
+&lt;p&gt;今回はRailsアプリが動くよう下記のパッケージをインストールします。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名前&lt;/th&gt;
+&lt;th&gt;役割&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;gcc-c++&lt;/td&gt;
+&lt;td&gt;c++のコンパイラ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;make&lt;/td&gt;
+&lt;td&gt;ソースコードからビルドできる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;patch&lt;/td&gt;
+&lt;td&gt;ファイルの修正や生成ができる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;git&lt;/td&gt;
+&lt;td&gt;バージョン管理ができる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;curl&lt;/td&gt;
+&lt;td&gt;データを転送できる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zlib-devel&lt;/td&gt;
+&lt;td&gt;データの圧縮や伸張ができる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;openssl-devel&lt;/td&gt;
+&lt;td&gt;通信を暗号化する&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ImageMagick-devel&lt;/td&gt;
+&lt;td&gt;画像を操作したり表示できる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;readline-devel&lt;/td&gt;
+&lt;td&gt;CUIで行入力を支援してくれる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;libcurl-devel&lt;/td&gt;
+&lt;td&gt;curlを扱える&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;libffi-devel&lt;/td&gt;
+&lt;td&gt;FFIの機能を扱える&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;libyaml-devel&lt;/td&gt;
+&lt;td&gt;yamlファイルを扱える&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;libicu-devel&lt;/td&gt;
+&lt;td&gt;Unicodeを扱える&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;libxml2-devel&lt;/td&gt;
+&lt;td&gt;XMLを解析できる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;libxslt-devel&lt;/td&gt;
+&lt;td&gt;XMLにXSLを適用させる&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;インストールするコマンドは下記&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo yum -y install gcc-c++ make patch git curl zlib-devel openssl-devel ImageMagick-devel readline-devel libcurl-devel libffi-devel libicu-devel libxml2-devel libxslt-devel&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;nodeをインストールします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# AWSのリポジトリに追加&lt;/span&gt;
+curl -sL https://rpm.nodesource.com/setup_14.x &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo bash -
+&lt;span class=&#34;c1&#34;&gt;# インストール&lt;/span&gt;
+sudo yum -y install nodejs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次はrubyのバージョン管理ツールであるrbenvをインストールします。
+下記のコマンドを実行します。&lt;/p&gt;
+&lt;p&gt;EC2ターミナル | rbenvのインストール&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# レポジトリをクローンしてインストール &lt;/span&gt;
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv 
+&lt;span class=&#34;c1&#34;&gt;# .bash_profileの設定 &lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;$HOME/.rbenv/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile 
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(rbenv init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile 
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .bash_profile 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次はrubyをインストールするためのruby-buildをインストールします。&lt;/p&gt;
+&lt;p&gt;EC2ターミナル | ruby-buildのインストール&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これでrubyをインストールできるようになりました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これら表示されている文字を最初の「ssh-rsa」から最後の「.internal」まで全てコピーしましょう。&lt;/p&gt;
+&lt;p&gt;nginxをインストールします。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo amazon-linux-extras install nginx1&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>スタバでキッシュを食べた</title>
         <link>https://shortbread2329.github.io/blog/p/%E3%82%B9%E3%82%BF%E3%83%90%E3%81%A7%E3%82%AD%E3%83%83%E3%82%B7%E3%83%A5%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%9F/</link>
         <pubDate>Tue, 22 Jun 2021 15:42:56 +0900</pubDate>

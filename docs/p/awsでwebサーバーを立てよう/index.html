@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='今ポートフォリオを作成しているんですけど、
+EC2でWebサーバーを立ててきました。
+その時のメモを記事にします。
+EC2とは AWSのサービスの1つで、「EC2（Amazon Elastic Compute Cloud）」は、AWSが提供する仮想サーバーです。読みは「イーシーツー」でいいみたいです。
+EC2は無料枠があります。
+EC2でWebサーバーを作成する それでは、実際にEC2でWebサーバーを作って試してみましょう。 以下の手順で行います。
+ EC2インスタンスを作成する EC2にログインする EC2インスタンスの環境構築 サーバーに「Nginx」をインストールする ブラウザからWebサーバーにアクセスする Nginx用のHTMLを作成する サーバーを停止する  EC2インスタンスを作成する AWSにアクセスし、マネジメントコンソールのサービス検索で「EC2」を検索
+image-20210625085046607
+【注意】
+サインアップが完了してから利用できるようになるまで、24時間ほどかかる場合があります。 この場合、「サービスへのお申し込みはあと少しで完了です！」画面が表示されます。 「AWSへの登録を完了してください」をクリックして登録を完了し、「クレジットカード情報」をクリックして情報を確認しておきましょう。
+EC2にアクセスされると、「EC2ダッシュボード」画面が表示されます。 左下の「インスタンスを起動」をクリックします。
+image-20210625085131485
+Amazon マシンイメージにはAmazon Linux 2 AMIを選択します。
+image-20210625085202185
+「2. インスタンスタイプの選択」画面が表示されます。
+「6.セキュリティグループの設定」をクリックします。
+image-20210625085350142
+「6. セキュリティグループの設定」画面が表示されます。
+左下の「ルールの追加」をクリックします。
+image-20210625085451347
+「ルールの追加」をクリックすると、その下に行が追加されます。
+追加行の「タイプ」で「カスタムTCP」をクリックし、表示されるメニューで「HTTP」を選択します。
+設定できたら、右下の「確認と作成」をクリックします。
+image-20210625085620944
+「7. 確認」画面が表示されます。 正しく設定されていることを確認し、よければ右下の「起動」をクリックします。
+image-20210625085643864
+「既存のキーペアを作成するか、新しいキーペアを作成します」画面が表示されます。
+「既存のキーペアの選択」のメニューで「新しいキーペアを作成」を選択し直します。
+「キーペア名」欄に好きなキーの名前入力し、右下の「キーペアのダウンロード」をクリックします。'><title>AWSでWebサーバーを立てよう</title>
+
+<link rel='canonical' href='https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.css"><meta property='og:title' content='AWSでWebサーバーを立てよう'>
+<meta property='og:description' content='今ポートフォリオを作成しているんですけど、
+EC2でWebサーバーを立ててきました。
+その時のメモを記事にします。
+EC2とは AWSのサービスの1つで、「EC2（Amazon Elastic Compute Cloud）」は、AWSが提供する仮想サーバーです。読みは「イーシーツー」でいいみたいです。
+EC2は無料枠があります。
+EC2でWebサーバーを作成する それでは、実際にEC2でWebサーバーを作って試してみましょう。 以下の手順で行います。
+ EC2インスタンスを作成する EC2にログインする EC2インスタンスの環境構築 サーバーに「Nginx」をインストールする ブラウザからWebサーバーにアクセスする Nginx用のHTMLを作成する サーバーを停止する  EC2インスタンスを作成する AWSにアクセスし、マネジメントコンソールのサービス検索で「EC2」を検索
+image-20210625085046607
+【注意】
+サインアップが完了してから利用できるようになるまで、24時間ほどかかる場合があります。 この場合、「サービスへのお申し込みはあと少しで完了です！」画面が表示されます。 「AWSへの登録を完了してください」をクリックして登録を完了し、「クレジットカード情報」をクリックして情報を確認しておきましょう。
+EC2にアクセスされると、「EC2ダッシュボード」画面が表示されます。 左下の「インスタンスを起動」をクリックします。
+image-20210625085131485
+Amazon マシンイメージにはAmazon Linux 2 AMIを選択します。
+image-20210625085202185
+「2. インスタンスタイプの選択」画面が表示されます。
+「6.セキュリティグループの設定」をクリックします。
+image-20210625085350142
+「6. セキュリティグループの設定」画面が表示されます。
+左下の「ルールの追加」をクリックします。
+image-20210625085451347
+「ルールの追加」をクリックすると、その下に行が追加されます。
+追加行の「タイプ」で「カスタムTCP」をクリックし、表示されるメニューで「HTTP」を選択します。
+設定できたら、右下の「確認と作成」をクリックします。
+image-20210625085620944
+「7. 確認」画面が表示されます。 正しく設定されていることを確認し、よければ右下の「起動」をクリックします。
+image-20210625085643864
+「既存のキーペアを作成するか、新しいキーペアを作成します」画面が表示されます。
+「既存のキーペアの選択」のメニューで「新しいキーペアを作成」を選択し直します。
+「キーペア名」欄に好きなキーの名前入力し、右下の「キーペアのダウンロード」をクリックします。'>
+<meta property='og:url' content='https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/'>
+<meta property='og:site_name' content='むーさんDiary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AWS' /><meta property='article:tag' content='インフラ' /><meta property='article:published_time' content='2021-06-25T08:23:29&#43;09:00'/><meta property='article:modified_time' content='2021-06-25T08:23:29&#43;09:00'/>
+<meta name="twitter:site" content="@https://twitter.com/musan_free">
+    <meta name="twitter:creator" content="@https://twitter.com/musan_free"><meta name="twitter:title" content="AWSでWebサーバーを立てよう">
+<meta name="twitter:description" content="今ポートフォリオを作成しているんですけど、
+EC2でWebサーバーを立ててきました。
+その時のメモを記事にします。
+EC2とは AWSのサービスの1つで、「EC2（Amazon Elastic Compute Cloud）」は、AWSが提供する仮想サーバーです。読みは「イーシーツー」でいいみたいです。
+EC2は無料枠があります。
+EC2でWebサーバーを作成する それでは、実際にEC2でWebサーバーを作って試してみましょう。 以下の手順で行います。
+ EC2インスタンスを作成する EC2にログインする EC2インスタンスの環境構築 サーバーに「Nginx」をインストールする ブラウザからWebサーバーにアクセスする Nginx用のHTMLを作成する サーバーを停止する  EC2インスタンスを作成する AWSにアクセスし、マネジメントコンソールのサービス検索で「EC2」を検索
+image-20210625085046607
+【注意】
+サインアップが完了してから利用できるようになるまで、24時間ほどかかる場合があります。 この場合、「サービスへのお申し込みはあと少しで完了です！」画面が表示されます。 「AWSへの登録を完了してください」をクリックして登録を完了し、「クレジットカード情報」をクリックして情報を確認しておきましょう。
+EC2にアクセスされると、「EC2ダッシュボード」画面が表示されます。 左下の「インスタンスを起動」をクリックします。
+image-20210625085131485
+Amazon マシンイメージにはAmazon Linux 2 AMIを選択します。
+image-20210625085202185
+「2. インスタンスタイプの選択」画面が表示されます。
+「6.セキュリティグループの設定」をクリックします。
+image-20210625085350142
+「6. セキュリティグループの設定」画面が表示されます。
+左下の「ルールの追加」をクリックします。
+image-20210625085451347
+「ルールの追加」をクリックすると、その下に行が追加されます。
+追加行の「タイプ」で「カスタムTCP」をクリックし、表示されるメニューで「HTTP」を選択します。
+設定できたら、右下の「確認と作成」をクリックします。
+image-20210625085620944
+「7. 確認」画面が表示されます。 正しく設定されていることを確認し、よければ右下の「起動」をクリックします。
+image-20210625085643864
+「既存のキーペアを作成するか、新しいキーペアを作成します」画面が表示されます。
+「既存のキーペアの選択」のメニューで「新しいキーペアを作成」を選択し直します。
+「キーペア名」欄に好きなキーの名前入力し、右下の「キーペアのダウンロード」をクリックします。"><style>
+        
+    :root {
+        --base-font-family: "Noto Sans JP", var(--sys-font-family), var(--zh-font-family), sans-serif;
+    }
+</style>
+
+<script>
+        (function () {
+            const customFont = document.createElement('link');
+            customFont.href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap";
+            customFont.type = "text/css";
+            customFont.rel = "stylesheet";
+
+            document.head.appendChild(customFont);
+        }());
+</script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hu43cec17023671785a76c5dde11ef1ccf_3208_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://shortbread2329.github.io/blog/">むーさんDiary</a></h1>
+        <h2 class="site-description">プログラミングや一人暮らし向け料理やお菓子作りを中心としたブログを載せていきます。</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/blog/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>ホーム</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>自己紹介</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>ダークモード</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://shortbread2329.github.io/blog/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/" >
+                テクノロジー
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/">AWSでWebサーバーを立てよう</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jun 25, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>今ポートフォリオを作成しているんですけど、</p>
+<p>EC2でWebサーバーを立ててきました。</p>
+<p>その時のメモを記事にします。</p>
+<h1 id="ec2とは">EC2とは</h1>
+<p>AWSのサービスの1つで、「EC2（Amazon Elastic Compute Cloud）」は、AWSが提供する仮想サーバーです。読みは「<strong>イーシーツー</strong>」でいいみたいです。</p>
+<p>EC2は無料枠があります。</p>
+<h1 id="ec2でwebサーバーを作成する">EC2でWebサーバーを作成する</h1>
+<p>それでは、実際にEC2でWebサーバーを作って試してみましょう。
+以下の手順で行います。</p>
+<ol>
+<li>EC2インスタンスを作成する</li>
+<li>EC2にログインする</li>
+<li>EC2インスタンスの環境構築</li>
+<li>サーバーに「Nginx」をインストールする</li>
+<li>ブラウザからWebサーバーにアクセスする</li>
+<li>Nginx用のHTMLを作成する</li>
+<li>サーバーを停止する</li>
+</ol>
+<h1 id="ec2インスタンスを作成する">EC2インスタンスを作成する</h1>
+<p>AWSにアクセスし、マネジメントコンソールのサービス検索で「<strong>EC2</strong>」を検索</p>
+<p><figure style="flex-grow: 315; flex-basis: 756px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607.png" data-size="1097x348"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607_hua70464efcb1b44fd30499b8d26623af0_53084_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085046607_hua70464efcb1b44fd30499b8d26623af0_53084_1024x0_resize_box_2.png 1024w"
+				width="1097"
+				height="348"
+				loading="lazy"
+				alt="image-20210625085046607">
+		</a>
+		
+		<figcaption>image-20210625085046607</figcaption>
+		
+	</figure></p>
+<p><strong>【注意】</strong></p>
+<p>サインアップが完了してから利用できるようになるまで、24時間ほどかかる場合があります。
+この場合、「サービスへのお申し込みはあと少しで完了です！」画面が表示されます。
+「AWSへの登録を完了してください」をクリックして登録を完了し、「クレジットカード情報」をクリックして情報を確認しておきましょう。</p>
+<p>EC2にアクセスされると、「EC2ダッシュボード」画面が表示されます。
+左下の「インスタンスを起動」をクリックします。</p>
+<p><figure style="flex-grow: 310; flex-basis: 744px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485.png" data-size="1098x354"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485_hu68bf01adb74fc04bd4a77956324bffce_116309_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085131485_hu68bf01adb74fc04bd4a77956324bffce_116309_1024x0_resize_box_2.png 1024w"
+				width="1098"
+				height="354"
+				loading="lazy"
+				alt="image-20210625085131485">
+		</a>
+		
+		<figcaption>image-20210625085131485</figcaption>
+		
+	</figure></p>
+<p>Amazon マシンイメージにはAmazon Linux 2 AMIを選択します。</p>
+<p><figure style="flex-grow: 397; flex-basis: 953px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185.png" data-size="1109x279"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185_hu18e271256fac9c626574edc1f4e68118_128245_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085202185_hu18e271256fac9c626574edc1f4e68118_128245_1024x0_resize_box_2.png 1024w"
+				width="1109"
+				height="279"
+				loading="lazy"
+				alt="image-20210625085202185">
+		</a>
+		
+		<figcaption>image-20210625085202185</figcaption>
+		
+	</figure></p>
+<p>「2. インスタンスタイプの選択」画面が表示されます。</p>
+<p>「6.セキュリティグループの設定」をクリックします。</p>
+<p><figure style="flex-grow: 895; flex-basis: 2150px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142.png" data-size="1093x122"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142_hu56715e7297b8f96d14cf7c02abd7c237_76710_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085350142_hu56715e7297b8f96d14cf7c02abd7c237_76710_1024x0_resize_box_2.png 1024w"
+				width="1093"
+				height="122"
+				loading="lazy"
+				alt="image-20210625085350142">
+		</a>
+		
+		<figcaption>image-20210625085350142</figcaption>
+		
+	</figure></p>
+<p>「6. セキュリティグループの設定」画面が表示されます。</p>
+<p>左下の「ルールの追加」をクリックします。</p>
+<p><figure style="flex-grow: 263; flex-basis: 632px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347.png" data-size="1104x419"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347_huc265fd2c7610760d0303954a66ecad31_158013_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085451347_huc265fd2c7610760d0303954a66ecad31_158013_1024x0_resize_box_2.png 1024w"
+				width="1104"
+				height="419"
+				loading="lazy"
+				alt="image-20210625085451347">
+		</a>
+		
+		<figcaption>image-20210625085451347</figcaption>
+		
+	</figure></p>
+<p>「ルールの追加」をクリックすると、その下に行が追加されます。</p>
+<p>追加行の「タイプ」で「カスタムTCP」をクリックし、表示されるメニューで「<strong>HTTP</strong>」を選択します。</p>
+<p>設定できたら、右下の「確認と作成」をクリックします。</p>
+<p><figure style="flex-grow: 290; flex-basis: 697px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944.png" data-size="1101x379"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944_hu4780ee8754ccbec73b41fcbc634bcc67_141214_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085620944_hu4780ee8754ccbec73b41fcbc634bcc67_141214_1024x0_resize_box_2.png 1024w"
+				width="1101"
+				height="379"
+				loading="lazy"
+				alt="image-20210625085620944">
+		</a>
+		
+		<figcaption>image-20210625085620944</figcaption>
+		
+	</figure></p>
+<p>「7. 確認」画面が表示されます。
+正しく設定されていることを確認し、よければ右下の「起動」をクリックします。</p>
+<p><figure style="flex-grow: 210; flex-basis: 506px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864.png" data-size="1095x519"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864_hu2c9d3f3925bdf1be210428ff6f78f0c0_196515_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085643864_hu2c9d3f3925bdf1be210428ff6f78f0c0_196515_1024x0_resize_box_2.png 1024w"
+				width="1095"
+				height="519"
+				loading="lazy"
+				alt="image-20210625085643864">
+		</a>
+		
+		<figcaption>image-20210625085643864</figcaption>
+		
+	</figure></p>
+<p>「既存のキーペアを作成するか、新しいキーペアを作成します」画面が表示されます。</p>
+<p>「既存のキーペアの選択」のメニューで「新しいキーペアを作成」を選択し直します。</p>
+<p>「キーペア名」欄に好きなキーの名前入力し、右下の「キーペアのダウンロード」をクリックします。</p>
+<p>キーペアをダウンロードする画面が表示されるので、ダウンロードします。
+ダウンロードが終わったら、「インスタンスの作成」をクリックします。</p>
+<p><figure style="flex-grow: 233; flex-basis: 559px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354.png" data-size="1080x463"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354_hu8977c6f6aa47c6cb6e340f0d97f5c606_121589_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625085730354_hu8977c6f6aa47c6cb6e340f0d97f5c606_121589_1024x0_resize_box_2.png 1024w"
+				width="1080"
+				height="463"
+				loading="lazy"
+				alt="image-20210625085730354">
+		</a>
+		
+		<figcaption>image-20210625085730354</figcaption>
+		
+	</figure></p>
+<p>「作成ステータス」画面が表示されます。</p>
+<p>「インスタンスは現在作成中です」の右側にある番号（インスタンスID）をクリックします。</p>
+<p>「パブリックIPv4アドレス」のアドレスをコピーしておきます。</p>
+<p><figure style="flex-grow: 702; flex-basis: 1686px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298.png" data-size="1813x258"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298_hu551c7da2a60ea3fa9ea6d8f125d118c3_61475_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625122734298_hu551c7da2a60ea3fa9ea6d8f125d118c3_61475_1024x0_resize_box_2.png 1024w"
+				width="1813"
+				height="258"
+				loading="lazy"
+				alt="image-20210625122734298">
+		</a>
+		
+		<figcaption>image-20210625122734298</figcaption>
+		
+	</figure></p>
+<h1 id="ec2にログインする">EC2にログインする</h1>
+<p>ローカルコマンドラインから以下を入力します。</p>
+<p><code>ssh -i キーパス ユーザ名(ec2-user)@コピーしたアドレス</code></p>
+<p><figure style="flex-grow: 385; flex-basis: 924px">
+		<a href="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159.png" data-size="832x216"><img src="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159.png"
+				srcset="/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159_hu0684a85f2b1051a42712d61378b544d4_6521_480x0_resize_box_2.png 480w, /blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/image-20210625124602159_hu0684a85f2b1051a42712d61378b544d4_6521_1024x0_resize_box_2.png 1024w"
+				width="832"
+				height="216"
+				loading="lazy"
+				alt="image-20210625124602159">
+		</a>
+		
+		<figcaption>image-20210625124602159</figcaption>
+		
+	</figure></p>
+<h1 id="ec2インスタンスの環境構築">EC2インスタンスの環境構築</h1>
+<p>パッケージのバージョンを管理するにはyumコマンドを使います。</p>
+<p>まずはyumコマンドでパッケージをアップデートします。</p>
+<pre><code>sudo yum update
+</code></pre><p>必要なパッケージをインストールします。</p>
+<p>Amazon LInuxは初期状態だと必要最低限のパッケージしか入っていません。</p>
+<p>なのでよく利用するパッケージをインストールしていきます。</p>
+<p>今回はRailsアプリが動くよう下記のパッケージをインストールします。</p>
+<table>
+<thead>
+<tr>
+<th>名前</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gcc-c++</td>
+<td>c++のコンパイラ</td>
+</tr>
+<tr>
+<td>make</td>
+<td>ソースコードからビルドできる</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>ファイルの修正や生成ができる</td>
+</tr>
+<tr>
+<td>git</td>
+<td>バージョン管理ができる</td>
+</tr>
+<tr>
+<td>curl</td>
+<td>データを転送できる</td>
+</tr>
+<tr>
+<td>zlib-devel</td>
+<td>データの圧縮や伸張ができる</td>
+</tr>
+<tr>
+<td>openssl-devel</td>
+<td>通信を暗号化する</td>
+</tr>
+<tr>
+<td>ImageMagick-devel</td>
+<td>画像を操作したり表示できる</td>
+</tr>
+<tr>
+<td>readline-devel</td>
+<td>CUIで行入力を支援してくれる</td>
+</tr>
+<tr>
+<td>libcurl-devel</td>
+<td>curlを扱える</td>
+</tr>
+<tr>
+<td>libffi-devel</td>
+<td>FFIの機能を扱える</td>
+</tr>
+<tr>
+<td>libyaml-devel</td>
+<td>yamlファイルを扱える</td>
+</tr>
+<tr>
+<td>libicu-devel</td>
+<td>Unicodeを扱える</td>
+</tr>
+<tr>
+<td>libxml2-devel</td>
+<td>XMLを解析できる</td>
+</tr>
+<tr>
+<td>libxslt-devel</td>
+<td>XMLにXSLを適用させる</td>
+</tr>
+</tbody>
+</table>
+<p>インストールするコマンドは下記</p>
+<p><code>sudo yum -y install gcc-c++ make patch git curl zlib-devel openssl-devel ImageMagick-devel readline-devel libcurl-devel libffi-devel libicu-devel libxml2-devel libxslt-devel</code></p>
+<p>nodeをインストールします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># AWSのリポジトリに追加</span>
+curl -sL https://rpm.nodesource.com/setup_14.x <span class="p">|</span> sudo bash -
+<span class="c1"># インストール</span>
+sudo yum -y install nodejs
+</code></pre></div><p>次はrubyのバージョン管理ツールであるrbenvをインストールします。
+下記のコマンドを実行します。</p>
+<p>EC2ターミナル | rbenvのインストール</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># レポジトリをクローンしてインストール </span>
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv 
+<span class="c1"># .bash_profileの設定 </span>
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bash_profile 
+<span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bash_profile 
+<span class="nb">source</span> .bash_profile 
+</code></pre></div><p>次はrubyをインストールするためのruby-buildをインストールします。</p>
+<p>EC2ターミナル | ruby-buildのインストール</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build 
+</code></pre></div><p>これでrubyをインストールできるようになりました。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+</code></pre></div><p>これら表示されている文字を最初の「ssh-rsa」から最後の「.internal」まで全てコピーしましょう。</p>
+<p>nginxをインストールします。</p>
+<p><code>sudo amazon-linux-extras install nginx1</code></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/aws/">AWS</a>
+        
+            <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/">インフラ</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed musan</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-otiu1ubwtc" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 むーさんDiary
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

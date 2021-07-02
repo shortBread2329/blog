@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on むーさんDiary</title>
+    <link>https://shortbread2329.github.io/blog/tags/aws/</link>
+    <description>Recent content in AWS on むーさんDiary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 25 Jun 2021 08:23:29 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWSでWebサーバーを立てよう</title>
+      <link>https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</link>
+      <pubDate>Fri, 25 Jun 2021 08:23:29 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</guid>
+      <description>今ポートフォリオを作成しているんですけど、
+EC2でWebサーバーを立ててきました。
+その時のメモを記事にします。
+EC2とは AWSのサービスの1つで、「EC2（Amazon Elastic Compute Cloud）」は、AWSが提供する仮想サーバーです。読みは「イーシーツー」でいいみたいです。
+EC2は無料枠があります。
+EC2でWebサーバーを作成する それでは、実際にEC2でWebサーバーを作って試してみましょう。 以下の手順で行います。
+ EC2インスタンスを作成する EC2にログインする EC2インスタンスの環境構築 サーバーに「Nginx」をインストールする ブラウザからWebサーバーにアクセスする Nginx用のHTMLを作成する サーバーを停止する  EC2インスタンスを作成する AWSにアクセスし、マネジメントコンソールのサービス検索で「EC2」を検索
+image-20210625085046607
+【注意】
+サインアップが完了してから利用できるようになるまで、24時間ほどかかる場合があります。 この場合、「サービスへのお申し込みはあと少しで完了です！」画面が表示されます。 「AWSへの登録を完了してください」をクリックして登録を完了し、「クレジットカード情報」をクリックして情報を確認しておきましょう。
+EC2にアクセスされると、「EC2ダッシュボード」画面が表示されます。 左下の「インスタンスを起動」をクリックします。
+image-20210625085131485
+Amazon マシンイメージにはAmazon Linux 2 AMIを選択します。
+image-20210625085202185
+「2. インスタンスタイプの選択」画面が表示されます。
+「6.セキュリティグループの設定」をクリックします。
+image-20210625085350142
+「6. セキュリティグループの設定」画面が表示されます。
+左下の「ルールの追加」をクリックします。
+image-20210625085451347
+「ルールの追加」をクリックすると、その下に行が追加されます。
+追加行の「タイプ」で「カスタムTCP」をクリックし、表示されるメニューで「HTTP」を選択します。
+設定できたら、右下の「確認と作成」をクリックします。
+image-20210625085620944
+「7. 確認」画面が表示されます。 正しく設定されていることを確認し、よければ右下の「起動」をクリックします。
+image-20210625085643864
+「既存のキーペアを作成するか、新しいキーペアを作成します」画面が表示されます。
+「既存のキーペアの選択」のメニューで「新しいキーペアを作成」を選択し直します。
+「キーペア名」欄に好きなキーの名前入力し、右下の「キーペアのダウンロード」をクリックします。</description>
+    </item>
+    
+  </channel>
+</rss>
