@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uru on むーさんDiary</title>
+    <link>https://shortbread2329.github.io/blog/tags/uru/</link>
+    <description>Recent content in uru on むーさんDiary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 04 Jul 2021 00:10:04 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/tags/uru/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windowsで異なるバージョンのRubyを使いたい</title>
+      <link>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</link>
+      <pubDate>Sun, 04 Jul 2021 00:10:04 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</guid>
+      <description>普段は最新のRubyを使っているけど、
+Ruby on Railsなど環境によっては古いバージョンを使い分けたいときに。
+ 環境  windows10 Ruby 2.6.3 2.7.3 uru 0.8.5   uru公式サイト: https://bitbucket.org/jonforums/uru/wiki/Home  uruを導入する uru の準備   使い分けたいバージョンのRubyをインストール
+ メインで使う方のバージョン(ここでは2.6)のみパスを通すと便利 先に2.7のパスを通していた場合は環境変数を編集  参考: Qiita - Windows10で実行ファイルへのパスを通す手順      uru
+をダウンロードページからDL
+ DLリンク: https://bitbucket.org/jonforums/uru/wiki/Downloads uru-0.x.x-windows-x86 をクリック    DLされた uru-0.x.x-windows-x86.7z を解凍
+  uru_rt.exeを適当なフォルダに移動
+ ここでは C:\Program Files\uru に移動    コマンドラインで uru を使うため、移動した先へのパスを通す
+  コマンドラインで下記を実行
+$ uru_rt admin install ---&amp;gt; Installing uru into C:\Program Files\uru   同じフォルダに uru.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,128 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Fri, 02 Jul 2021 00:10:12 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 04 Jul 2021 00:10:04 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windowsで異なるバージョンのRubyを使いたい</title>
+        <link>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</link>
+        <pubDate>Sun, 04 Jul 2021 00:10:04 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</guid>
+        <description>&lt;p&gt;普段は最新のRubyを使っているけど、&lt;/p&gt;
+&lt;p&gt;Ruby on Railsなど環境によっては古いバージョンを使い分けたいときに。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;環境
+&lt;ul&gt;
+&lt;li&gt;windows10&lt;/li&gt;
+&lt;li&gt;Ruby 2.6.3 2.7.3&lt;/li&gt;
+&lt;li&gt;uru 0.8.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;uru公式サイト: &lt;a href=&#34;https://bitbucket.org/jonforums/uru/wiki/Home&#34;&gt;https://bitbucket.org/jonforums/uru/wiki/Home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;uruを導入する&#34;&gt;uruを導入する&lt;/h2&gt;
+&lt;h3 id=&#34;uru-の準備&#34;&gt;uru の準備&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使い分けたいバージョンのRubyをインストール&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;メインで使う方のバージョン(ここでは2.6)のみパスを通すと便利&lt;/li&gt;
+&lt;li&gt;先に2.7のパスを通していた場合は環境変数を編集
+&lt;ul&gt;
+&lt;li&gt;参考: &lt;a class=&#34;link&#34; href=&#34;https://qiita.com/shuhey/items/7ee0d25f14a997c9e285&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qiita - Windows10で実行ファイルへのパスを通す手順&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;uru&lt;/p&gt;
+&lt;p&gt;をダウンロードページからDL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DLリンク: &lt;a href=&#34;https://bitbucket.org/jonforums/uru/wiki/Downloads&#34;&gt;https://bitbucket.org/jonforums/uru/wiki/Downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uru-0.x.x-windows-x86&lt;/code&gt; をクリック&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DLされた &lt;code&gt;uru-0.x.x-windows-x86.7z&lt;/code&gt; を解凍&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;uru_rt.exeを適当なフォルダに移動&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ここでは &lt;code&gt;C:\Program Files\uru&lt;/code&gt; に移動&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;コマンドラインで uru を使うため、移動した先へのパスを通す&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;コマンドラインで下記を実行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ uru_rt admin install
+---&amp;gt; Installing uru into C:\Program Files\uru
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同じフォルダに uru.bat, uru.ps1 が生成されていることを確認&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;rubyのパスをuruに登録&#34;&gt;Rubyのパスをuruに登録&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;コマンドラインで下記を実行(Ruby2.6パスを登録)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# C:\Ruby24-x64\bin はRubyのDL先に合わせて変更
+$ uru admin add C:\Ruby24-x64\bin
+---&amp;gt; Registered ruby at `C:\Ruby24-x64\bin` as `263p62`
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ruby2.5も同様に登録&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登録されたか確認&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;uru ls
+    263p62      : ruby 2.6.3p62 (2019-04-16 revision 67580) [x64-mingw32]
+    273p183     : ruby 2.7.3p183 (2021-04-05 revision 6847ee089d) [x64-mingw32]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;uruを使ってみる&#34;&gt;uruを使ってみる&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;現在はパスを通してある Ruby2.7.3 が使える状態&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ruby -v
+ruby 2.7.3p183 (2021-04-05 revision 6847ee089d) [x64-mingw32]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;uru で Ruby2.6 に切り替え&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# &amp;quot;263p62&amp;quot; は &amp;quot;uru ls&amp;quot; で出てきた文字列
+$ uru 263p62
+---&amp;gt; now using ruby 2.6.3p62 tagged as `263p62`
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以降はコマンドライン実行中なら Ruby2.6 になります&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x64-mingw32]
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;ruby-version-ファイルでバージョン指定&#34;&gt;.ruby-version ファイルでバージョン指定&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;.ruby-version ファイルを作成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普通にエクスプローラーで新規テキストファイルをリネームしようとすると「ファイル名を入力してください」と出てしまいます&lt;/li&gt;
+&lt;li&gt;これはテキストエディタで新規保存時に名前を指定すると回避できます&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.ruby-version ファイルには使いたいRubyバージョンのみを記載(Ruby2.6.3を使いたいとき)&lt;/p&gt;
+&lt;p&gt;.ruby-version&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2.6.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;auto&lt;/code&gt; オプションを使うと .ruby-version に記載したバージョンに変更されます&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ uru auto
+---&amp;gt; now using ruby 2.6.3p62 tagged as `263p62`
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
         <title>ローストポーク</title>
         <link>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9D%E3%83%BC%E3%82%AF/</link>
         <pubDate>Fri, 02 Jul 2021 00:10:12 +0900</pubDate>
