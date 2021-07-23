@@ -6,7 +6,27 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Sun, 04 Jul 2021 00:10:04 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Jul 2021 00:10:06 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ローカルのみのGitリポジトリをつくろう</title>
+        <link>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/</link>
+        <pubDate>Sun, 18 Jul 2021 00:10:06 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/</guid>
+        <description>&lt;p&gt;ソース管理をするといえばGitとGithubが主流なのかなというご時世ですが、&lt;/p&gt;
+&lt;p&gt;そもそもソースを管理できればいいだけで公開する必要はない時もあるかと思います。&lt;/p&gt;
+&lt;p&gt;そんな時に実は簡単にできるので是非活用してみてください。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;リモートリポジトリを作成するローカル環境で&#34;&gt;リモートリポジトリを作成する(ローカル環境で)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir .git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; .git
+git init --bare --shared
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;オプションの解説&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;–bare&lt;/strong&gt;：カレントディレクトリ配下のソースをリモートリポジトリにする。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;–share&lt;/strong&gt;：このリポジトリを共有可能にする。&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Windowsで異なるバージョンのRubyを使いたい</title>
         <link>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</link>
         <pubDate>Sun, 04 Jul 2021 00:10:04 +0900</pubDate>

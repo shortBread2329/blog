@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>プログラミング on むーさんDiary</title>
+    <link>https://shortbread2329.github.io/blog/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
+    <description>Recent content in プログラミング on むーさんDiary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 18 Jul 2021 00:10:06 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ローカルのみのGitリポジトリをつくろう</title>
+      <link>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/</link>
+      <pubDate>Sun, 18 Jul 2021 00:10:06 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/</guid>
+      <description>ソース管理をするといえばGitとGithubが主流なのかなというご時世ですが、
+そもそもソースを管理できればいいだけで公開する必要はない時もあるかと思います。
+そんな時に実は簡単にできるので是非活用してみてください。
+ リモートリポジトリを作成する(ローカル環境で) mkdir .git cd .git git init --bare --shared オプションの解説
+–bare：カレントディレクトリ配下のソースをリモートリポジトリにする。
+–share：このリポジトリを共有可能にする。
+​</description>
+    </item>
+    
+  </channel>
+</rss>
