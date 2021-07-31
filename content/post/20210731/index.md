@@ -7,7 +7,6 @@ categories : [
 tags : [
 "python"
 ]
-draft: true
 ---
 
 # pythonで自作関数をモジュール化・パッケージ化
@@ -23,18 +22,25 @@ draft: true
 以下のようなフォルダとファイルを作成していきます。
 
 ```
-|--sample_project
-|  |--sample
-|  |  |--sample.py
-|  |  |--hoge.py
-|  |--setup.py
+./mylibrary
+--- /mylibrary
+    ---/__init__.py
+        file1.py
+        file2.py
+--- /setup.py
 ```
 
-- sampleフォルダ
+- mylibraryフォルダ
 
   ライブラリ化したいソースをここに配置していきます。
 
-  sample.pyやhoge.pyはつまりライブラリ化したいソースです。
+- \__init__.py
+
+  ```python
+  from .file1 import class1
+  from .file2 import class2
+  from .file3 import * 
+  ```
 
   
 
@@ -42,20 +48,33 @@ draft: true
 
   インストール時の構成を記述するファイルです。
 
-### setup.py
+  setup.pyの書き方は、本来はもっといろいろと書くべきのようですが、
 
-```
-from setuptools import setup, find_packages
+  今回は公開することを考えず最小限で行きます。
+
+```python
+from setuptools import setup
 
 setup(
-    name='Sample',
-    version="0.0.1",
-    description="Sample Code",
-    long_description="",
-    author='名前',
-    license='MIT',
-    classifiers=[
-        "Development Status :: 1 - Planning"
-    ]
+    install_requires=[],
+    entry_points={
+        "console_scripts":[
+            "myapp = test:ggg"
+        ]
+    }
 )
 ```
+
+- `install_requires`
+  - importしている依存ライブラリをリストで羅列する
+  - "sys"など標準ライブラリを書くとエラーになる
+
+## 完成したライブラリのインストール
+
+あとはライブラリをインストールするだけです.
+
+```
+python setup.py install
+```
+
+お疲れ様でした!
