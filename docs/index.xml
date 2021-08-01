@@ -6,7 +6,69 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Sun, 18 Jul 2021 00:10:06 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 31 Jul 2021 21:58:40 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>pythonで自作関数をモジュール化・パッケージ化</title>
+        <link>https://shortbread2329.github.io/blog/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/</link>
+        <pubDate>Sat, 31 Jul 2021 21:58:40 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/blog/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/</guid>
+        <description>&lt;h1 id=&#34;pythonで自作関数をモジュール化パッケージ化&#34;&gt;pythonで自作関数をモジュール化・パッケージ化&lt;/h1&gt;
+&lt;p&gt;私がTwitterAPIを叩く処理を実装していた際にライブラリ化したくなったのでまとめてみます。&lt;/p&gt;
+&lt;h2 id=&#34;前提条件&#34;&gt;前提条件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 3.0以上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;構成ディレクトリ&#34;&gt;構成ディレクトリ&lt;/h2&gt;
+&lt;p&gt;以下のようなフォルダとファイルを作成していきます。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./mylibrary
+--- /mylibrary
+    ---/__init__.py
+        file1.py
+        file2.py
+--- /setup.py
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;mylibraryフォルダ&lt;/p&gt;
+&lt;p&gt;ライブラリ化したいソースをここに配置していきます。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_&lt;em&gt;init&lt;/em&gt;_.py&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;.file1&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;class1&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;.file2&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;class2&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;.file3&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;setup.py&lt;/p&gt;
+&lt;p&gt;インストール時の構成を記述するファイルです。&lt;/p&gt;
+&lt;p&gt;setup.pyの書き方は、本来はもっといろいろと書くべきのようですが、&lt;/p&gt;
+&lt;p&gt;今回は公開することを考えず最小限で行きます。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;setuptools&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;install_requires&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;entry_points&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;console_scripts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;myapp = test:ggg&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;install_requires&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;importしている依存ライブラリをリストで羅列する&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;sys&amp;quot;など標準ライブラリを書くとエラーになる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;完成したライブラリのインストール&#34;&gt;完成したライブラリのインストール&lt;/h2&gt;
+&lt;p&gt;あとはライブラリをインストールするだけです.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python setup.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;お疲れ様でした!&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>ローカルのみのGitリポジトリをつくろう</title>
         <link>https://shortbread2329.github.io/blog/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/</link>
         <pubDate>Sun, 18 Jul 2021 00:10:06 +0900</pubDate>
