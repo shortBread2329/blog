@@ -2,107 +2,107 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on むーさんDiary</title>
-    <link>https://shortbread2329.github.io/blog/categories/</link>
+    <link>https://shortbread2329.github.io/categories/</link>
     <description>Recent content in Categories on むーさんDiary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 31 Jul 2021 21:58:40 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 21:58:40 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>プログラミング</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
+      <link>https://shortbread2329.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
       <pubDate>Sat, 31 Jul 2021 21:58:40 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>テクノロジー</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/</link>
+      <link>https://shortbread2329.github.io/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/</link>
       <pubDate>Sun, 04 Jul 2021 00:10:04 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/</guid>
       <description></description>
     </item>
     
     <item>
       <title>料理</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E6%96%99%E7%90%86/</link>
+      <link>https://shortbread2329.github.io/categories/%E6%96%99%E7%90%86/</link>
       <pubDate>Fri, 02 Jul 2021 00:10:12 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E6%96%99%E7%90%86/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E6%96%99%E7%90%86/</guid>
       <description></description>
     </item>
     
     <item>
       <title>食レポ</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E9%A3%9F%E3%83%AC%E3%83%9D/</link>
+      <link>https://shortbread2329.github.io/categories/%E9%A3%9F%E3%83%AC%E3%83%9D/</link>
       <pubDate>Tue, 22 Jun 2021 15:42:56 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E9%A3%9F%E3%83%AC%E3%83%9D/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E9%A3%9F%E3%83%AC%E3%83%9D/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ソフトウェア</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/</link>
+      <link>https://shortbread2329.github.io/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/</link>
       <pubDate>Tue, 22 Jun 2021 09:58:59 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ライフハック</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/</link>
+      <link>https://shortbread2329.github.io/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/</link>
       <pubDate>Tue, 22 Jun 2021 09:58:59 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ずぼら飯</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E3%81%9A%E3%81%BC%E3%82%89%E9%A3%AF/</link>
+      <link>https://shortbread2329.github.io/categories/%E3%81%9A%E3%81%BC%E3%82%89%E9%A3%AF/</link>
       <pubDate>Sat, 19 Jun 2021 00:14:59 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E3%81%9A%E3%81%BC%E3%82%89%E9%A3%AF/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E3%81%9A%E3%81%BC%E3%82%89%E9%A3%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>プログラミング</title>
-      <link>https://shortbread2329.github.io/blog/categories/programing/</link>
+      <link>https://shortbread2329.github.io/categories/programing/</link>
       <pubDate>Mon, 14 Jun 2021 07:31:57 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/programing/</guid>
+      <guid>https://shortbread2329.github.io/categories/programing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>雑記</title>
-      <link>https://shortbread2329.github.io/blog/categories/zakki/</link>
+      <link>https://shortbread2329.github.io/categories/zakki/</link>
       <pubDate>Sat, 05 Jun 2021 20:55:04 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/zakki/</guid>
+      <guid>https://shortbread2329.github.io/categories/zakki/</guid>
       <description></description>
     </item>
     
     <item>
       <title>商品レビュー</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E5%95%86%E5%93%81%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</link>
+      <link>https://shortbread2329.github.io/categories/%E5%95%86%E5%93%81%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</link>
       <pubDate>Fri, 04 Jun 2021 13:29:06 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E5%95%86%E5%93%81%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E5%95%86%E5%93%81%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</guid>
       <description></description>
     </item>
     
     <item>
       <title>食品</title>
-      <link>https://shortbread2329.github.io/blog/categories/%E9%A3%9F%E5%93%81/</link>
+      <link>https://shortbread2329.github.io/categories/%E9%A3%9F%E5%93%81/</link>
       <pubDate>Fri, 04 Jun 2021 13:29:06 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/categories/%E9%A3%9F%E5%93%81/</guid>
+      <guid>https://shortbread2329.github.io/categories/%E9%A3%9F%E5%93%81/</guid>
       <description></description>
     </item>
     

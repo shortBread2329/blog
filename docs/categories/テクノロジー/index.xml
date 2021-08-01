@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>テクノロジー on むーさんDiary</title>
-    <link>https://shortbread2329.github.io/blog/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/</link>
+    <link>https://shortbread2329.github.io/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/</link>
     <description>Recent content in テクノロジー on むーさんDiary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 04 Jul 2021 00:10:04 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/blog/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 00:10:04 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/categories/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windowsで異なるバージョンのRubyを使いたい</title>
-      <link>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</link>
+      <link>https://shortbread2329.github.io/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</link>
       <pubDate>Sun, 04 Jul 2021 00:10:04 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</guid>
+      <guid>https://shortbread2329.github.io/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</guid>
       <description>普段は最新のRubyを使っているけど、
 Ruby on Railsなど環境によっては古いバージョンを使い分けたいときに。
  環境  windows10 Ruby 2.6.3 2.7.3 uru 0.8.5   uru公式サイト: https://bitbucket.org/jonforums/uru/wiki/Home  uruを導入する uru の準備   使い分けたいバージョンのRubyをインストール
@@ -27,10 +27,10 @@ $ uru_rt admin install ---&amp;gt; Installing uru into C:\Program Files\uru   �
     
     <item>
       <title>AWSでWebサーバーを立てよう</title>
-      <link>https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</link>
+      <link>https://shortbread2329.github.io/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</link>
       <pubDate>Fri, 25 Jun 2021 08:23:29 +0900</pubDate>
       
-      <guid>https://shortbread2329.github.io/blog/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</guid>
+      <guid>https://shortbread2329.github.io/p/aws%E3%81%A7web%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E7%AB%8B%E3%81%A6%E3%82%88%E3%81%86/</guid>
       <description>今ポートフォリオを作成しているんですけど、
 EC2でWebサーバーを立ててきました。
 その時のメモを記事にします。
