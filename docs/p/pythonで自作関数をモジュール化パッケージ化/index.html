@@ -42,7 +42,18 @@ from .file1 import class1 from .file2 import class2 from .file3 import *   setup
 setup.pyの書き方は、本来はもっといろいろと書くべきのようですが、
 今回は公開することを考えず最小限で行きます。
   from setuptools import setup setup( install_requires=[], entry_points={ &amp;#34;console_scripts&amp;#34;:[ &amp;#34;myapp = test:ggg&amp;#34; ] } )  install_requires  importしている依存ライブラリをリストで羅列する &amp;ldquo;sys&amp;quot;など標準ライブラリを書くとエラーになる    完成したライブラリのインストール あとはライブラリをインストールするだけです.
-python setup.py install お疲れ様でした!"><style>
+python setup.py install お疲れ様でした!">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-PQKPVPQ2FT', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<style>
         
     :root {
         --base-font-family: "Noto Sans JP", var(--sys-font-family), var(--zh-font-family), sans-serif;

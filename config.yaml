@@ -8,7 +8,7 @@ publishDir: "docs"
 disqusShortname: "blog-otiu1ubwtc"
 
 # GA Tracking ID
-googleAnalytics:
+googleAnalytics: "G-PQKPVPQ2FT"
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl
