@@ -6,7 +6,35 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Sat, 31 Jul 2021 21:58:40 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Aug 2021 16:56:53 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>XperiaAceを初期化しようとした</title>
+        <link>https://shortbread2329.github.io/p/xperiaace%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%9F/</link>
+        <pubDate>Tue, 03 Aug 2021 16:56:53 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/p/xperiaace%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%9F/</guid>
+        <description>&lt;p&gt;2021年3月ごろ、楽天モバイルで1台1年無料につられスマホを契約したが、ロックを忘れて放置してしまっていた。&lt;/p&gt;
+&lt;p&gt;これによりマイナポイントを申請したモバイルPASMOが使えなくなりげんなり。&lt;/p&gt;
+&lt;p&gt;しかし初期化してもモバイルPASMOは復旧できそうだと判断したため、&lt;/p&gt;
+&lt;p&gt;初期化に挑戦するも、苦戦を強いられた。&lt;/p&gt;
+&lt;h2 id=&#34;xperiaace初期化の流れ&#34;&gt;XperiaAce初期化の流れ&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://xperia.sony.jp/support/use_support/manual/j3173/contents/TP0002433199.html?search=%E5%BF%98%E3%82%8C%E3%81%9F&#34;&gt;https://xperia.sony.jp/support/use_support/manual/j3173/contents/TP0002433199.html?search=%E5%BF%98%E3%82%8C%E3%81%9F&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;によると、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;パソコンにXperia Companionがインストールされていることを確認する。&lt;/li&gt;
+&lt;li&gt;Xperia Companionを起動し、［ソフトウェアの修復］をクリックする。&lt;/li&gt;
+&lt;li&gt;画面の指示に従ってソフトウェアの修復を完了する。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2ソフトウェアの修復の前でつまる&#34;&gt;2[ソフトウェアの修復]の前でつまる&lt;/h2&gt;
+&lt;p&gt;スマホをUSB接続したときに、スマホ側がUSBを許可していないみたいでここからどうすればよいかわからなくなる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://shortbread2329.github.io/C:%5cUsers%5crumia%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20210803182447956.png&#34; alt=&#34;image-20210803182447956&#34;  /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pcとスマホをどうやって接続するか&#34;&gt;PCとスマホをどうやって接続するか&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://knowledge.support.sony.jp/electronics/support/articles/S1603090078294&#34;&gt;https://knowledge.support.sony.jp/electronics/support/articles/S1603090078294&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;の手順の通りに行うことで、&lt;/p&gt;
+&lt;p&gt;音量下ボタンを押しながらUSB接続し、ソフトウェアの修復をすることができます。&lt;/p&gt;
+&lt;p&gt;これを使って初期状態にできました！&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>pythonで自作関数をモジュール化・パッケージ化</title>
         <link>https://shortbread2329.github.io/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/</link>
         <pubDate>Sat, 31 Jul 2021 21:58:40 +0900</pubDate>

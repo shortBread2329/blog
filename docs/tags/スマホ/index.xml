@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>スマホ on むーさんDiary</title>
+    <link>https://shortbread2329.github.io/tags/%E3%82%B9%E3%83%9E%E3%83%9B/</link>
+    <description>Recent content in スマホ on むーさんDiary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 03 Aug 2021 16:56:53 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/tags/%E3%82%B9%E3%83%9E%E3%83%9B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XperiaAceを初期化しようとした</title>
+      <link>https://shortbread2329.github.io/p/xperiaace%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%9F/</link>
+      <pubDate>Tue, 03 Aug 2021 16:56:53 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/p/xperiaace%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%9F/</guid>
+      <description>2021年3月ごろ、楽天モバイルで1台1年無料につられスマホを契約したが、ロックを忘れて放置してしまっていた。
+これによりマイナポイントを申請したモバイルPASMOが使えなくなりげんなり。
+しかし初期化してもモバイルPASMOは復旧できそうだと判断したため、
+初期化に挑戦するも、苦戦を強いられた。
+XperiaAce初期化の流れ https://xperia.sony.jp/support/use_support/manual/j3173/contents/TP0002433199.html?search=%E5%BF%98%E3%82%8C%E3%81%9F
+によると、
+ パソコンにXperia Companionがインストールされていることを確認する。 Xperia Companionを起動し、［ソフトウェアの修復］をクリックする。 画面の指示に従ってソフトウェアの修復を完了する。  2[ソフトウェアの修復]の前でつまる スマホをUSB接続したときに、スマホ側がUSBを許可していないみたいでここからどうすればよいかわからなくなる。
+PCとスマホをどうやって接続するか https://knowledge.support.sony.jp/electronics/support/articles/S1603090078294
+の手順の通りに行うことで、
+音量下ボタンを押しながらUSB接続し、ソフトウェアの修復をすることができます。
+これを使って初期状態にできました！</description>
+    </item>
+    
+  </channel>
+</rss>
