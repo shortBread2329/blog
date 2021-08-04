@@ -6,7 +6,24 @@
     <description>Recent content in プログラミング on むーさんDiary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 31 Jul 2021 21:58:40 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Aug 2021 13:24:53 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用途別、データ分析の考え方</title>
+      <link>https://shortbread2329.github.io/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/</link>
+      <pubDate>Wed, 04 Aug 2021 13:24:53 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/</guid>
+      <description>投資データなどの分析をしてみたいなあと考えて調べてまとめてみました。
+用途別で記載しています。
+仮説を立ててみる 一見関連性のない複数の事象が共起している場合、そこに何かしらの要因が隠れていることが多いです。これをアソシエーション分析と言います。
+例えば、「紙おむつとビールが同時に購入される確率がなぜか多い」や「Webサイトで会員登録するユーザーは登録前になぜかWikipediaを見ている可能性が高い」といった感じです。
+アソシエーション分析では複数の事象の関連性を見つけ出し、仮説を立て、経営戦略やマーケティングに活かすことが出来ます。
+アンケートを取って分類する アンケート調査における設問に対し、回答者の属性などの項目を交えて集計するデータ分析手法です。クロス集計分析と言います。
+クロス集計分析を用いることでユーザーの属性ごとの平均値を知ることが出来ます。
+複数のデータを要約する いくつかの変数を組み合わせて、少数の変数にまとめる手法です。主成分分析と呼ばれ、データを要約するのに用いられる代表的な手法です。
+この変数を組み合わせることを、変数を合成するといいます。そして合成されて新しくできた変数を主成分と呼びます。下図は主成分分析のイメージ図です。ピンク部分を作り出すのが、主成分分析のゴールになります。</description>
+    </item>
+    
     <item>
       <title>pythonで自作関数をモジュール化・パッケージ化</title>
       <link>https://shortbread2329.github.io/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/</link>

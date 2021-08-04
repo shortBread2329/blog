@@ -6,7 +6,28 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Tue, 03 Aug 2021 16:56:53 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 04 Aug 2021 13:24:53 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用途別、データ分析の考え方</title>
+        <link>https://shortbread2329.github.io/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/</link>
+        <pubDate>Wed, 04 Aug 2021 13:24:53 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/</guid>
+        <description>&lt;img src="https://shortbread2329.github.io/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/image-20210804135139308.png" alt="Featured image of post 用途別、データ分析の考え方" /&gt;&lt;p&gt;投資データなどの分析をしてみたいなあと考えて調べてまとめてみました。&lt;/p&gt;
+&lt;p&gt;用途別で記載しています。&lt;/p&gt;
+&lt;h2 id=&#34;仮説を立ててみる&#34;&gt;仮説を立ててみる&lt;/h2&gt;
+&lt;p&gt;一見関連性のない複数の事象が共起している場合、そこに何かしらの要因が隠れていることが多いです。&lt;strong&gt;これをアソシエーション分析&lt;/strong&gt;と言います。&lt;/p&gt;
+&lt;p&gt;例えば、「紙おむつとビールが同時に購入される確率がなぜか多い」や「Webサイトで会員登録するユーザーは登録前になぜかWikipediaを見ている可能性が高い」といった感じです。&lt;/p&gt;
+&lt;p&gt;アソシエーション分析では&lt;strong&gt;複数の事象の関連性を見つけ出し、仮説を立て、経営戦略やマーケティングに活かす&lt;/strong&gt;ことが出来ます。&lt;/p&gt;
+&lt;h2 id=&#34;アンケートを取って分類する&#34;&gt;アンケートを取って分類する&lt;/h2&gt;
+&lt;p&gt;アンケート調査における設問に対し、回答者の属性などの項目を交えて集計するデータ分析手法です。&lt;strong&gt;クロス集計分析&lt;/strong&gt;と言います。&lt;/p&gt;
+&lt;p&gt;クロス集計分析を用いることで&lt;strong&gt;ユーザーの属性ごとの平均値を知る&lt;/strong&gt;ことが出来ます。&lt;/p&gt;
+&lt;h2 id=&#34;複数のデータを要約する&#34;&gt;複数のデータを要約する&lt;/h2&gt;
+&lt;p&gt;いくつかの変数を組み合わせて、少数の変数にまとめる手法です。&lt;strong&gt;主成分分析&lt;/strong&gt;と呼ばれ、データを要約するのに用いられる代表的な手法です。&lt;/p&gt;
+&lt;p&gt;この変数を組み合わせることを、変数を合成するといいます。そして合成されて新しくできた変数を主成分と呼びます。下図は主成分分析のイメージ図です。&lt;strong&gt;ピンク部分を作り出すのが、主成分分析のゴールになります。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://shortbread2329.github.io/C:%5cUsers%5crumia%5cOneDrive%5cblog%5ccontent%5cpost%5c20210804%5cimage-20210804135058194.png&#34; alt=&#34;image-20210804135058194&#34;  /&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>XperiaAceを初期化しようとした</title>
         <link>https://shortbread2329.github.io/p/xperiaace%E3%82%92%E5%88%9D%E6%9C%9F%E5%8C%96%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%9F/</link>
         <pubDate>Tue, 03 Aug 2021 16:56:53 +0900</pubDate>
@@ -40,7 +61,7 @@
         <pubDate>Sat, 31 Jul 2021 21:58:40 +0900</pubDate>
         
         <guid>https://shortbread2329.github.io/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/</guid>
-        <description>&lt;h1 id=&#34;pythonで自作関数をモジュール化パッケージ化&#34;&gt;pythonで自作関数をモジュール化・パッケージ化&lt;/h1&gt;
+        <description>&lt;img src="https://shortbread2329.github.io/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/image-20210804134958029.png" alt="Featured image of post pythonで自作関数をモジュール化・パッケージ化" /&gt;&lt;h1 id=&#34;pythonで自作関数をモジュール化パッケージ化&#34;&gt;pythonで自作関数をモジュール化・パッケージ化&lt;/h1&gt;
 &lt;p&gt;私がTwitterAPIを叩く処理を実装していた際にライブラリ化したくなったのでまとめてみます。&lt;/p&gt;
 &lt;h2 id=&#34;前提条件&#34;&gt;前提条件&lt;/h2&gt;
 &lt;ul&gt;
@@ -102,7 +123,7 @@
         <pubDate>Sun, 18 Jul 2021 00:10:06 +0900</pubDate>
         
         <guid>https://shortbread2329.github.io/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/</guid>
-        <description>&lt;p&gt;ソース管理をするといえばGitとGithubが主流なのかなというご時世ですが、&lt;/p&gt;
+        <description>&lt;img src="https://shortbread2329.github.io/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/image-20210804135308649.png" alt="Featured image of post ローカルのみのGitリポジトリをつくろう" /&gt;&lt;p&gt;ソース管理をするといえばGitとGithubが主流なのかなというご時世ですが、&lt;/p&gt;
 &lt;p&gt;そもそもソースを管理できればいいだけで公開する必要はない時もあるかと思います。&lt;/p&gt;
 &lt;p&gt;そんな時に実は簡単にできるので是非活用してみてください。&lt;/p&gt;
 &lt;hr&gt;
@@ -122,7 +143,7 @@ git init --bare --shared
         <pubDate>Sun, 04 Jul 2021 00:10:04 +0900</pubDate>
         
         <guid>https://shortbread2329.github.io/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/</guid>
-        <description>&lt;p&gt;普段は最新のRubyを使っているけど、&lt;/p&gt;
+        <description>&lt;img src="https://shortbread2329.github.io/p/windows%E3%81%A7%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AEruby%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84/image-20210804135308649.png" alt="Featured image of post Windowsで異なるバージョンのRubyを使いたい" /&gt;&lt;p&gt;普段は最新のRubyを使っているけど、&lt;/p&gt;
 &lt;p&gt;Ruby on Railsなど環境によっては古いバージョンを使い分けたいときに。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;環境

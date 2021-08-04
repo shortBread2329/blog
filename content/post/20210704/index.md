@@ -9,6 +9,7 @@ tags : [
 "rails",
 "uru"
 ]
+image: image-20210804135308649.png
 ---
 
 普段は最新のRubyを使っているけど、

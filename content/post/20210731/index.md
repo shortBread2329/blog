@@ -7,6 +7,7 @@ categories : [
 tags : [
 "python"
 ]
+image: image-20210804134958029.png
 ---
 
 # pythonで自作関数をモジュール化・パッケージ化
