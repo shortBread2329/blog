@@ -1,6 +1,7 @@
 ---
 title: "XperiaAceを初期化しようとした"
 date: 2021-08-03T16:56:53+09:00
+image: smartphone.png
 categories : [
 "ライフハック",
 ]
