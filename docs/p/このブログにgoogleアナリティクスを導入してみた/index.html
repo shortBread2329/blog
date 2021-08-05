@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='googleアナリティクスとは基本無料のサイト解析サービスでして、
+登録したサイトへアクセスしたユーザーがとった行動に関するデータが見れます。例えば、
+「サイトの訪問者数はどれくらいか」
+「どのページがよく見られているのか」
+「訪問者はどこから来たのか」
+「使われたデバイスはスマホかパソコンか」
+などなどです。
+googleアナリティクスの始め方 1) Googleアカウントを作成しログインしておく とはいっても既に持っている人が多いと思うので割愛します。
+2) Googleアナリティクスアカウントを作成 次にGoogleアナリティクスアカウントを作成します。ここでは分析したいサイトのURLなどを入力し、トラッキングコードと呼ばれるタグを取得します。 このトラッキングコードをページのHTMLに設置し、それが読み込まれることで、Googleアナリティクスでデータを計測できるようになります。
+3) トラッキングコードを設置 最後に、先ほど取得したトラッキングコードを全てのページに設置します。
+またHUGOでブログを作っている方は、トラッキングコード内のトラッキングIDをコピーし「config.yaml」などのconfigファイルに以下を追記しコンパイルすると完了します。
+# GA Tracking IDgoogleAnalytics:&amp;#34;UA-123456789-1&amp;#34;#トラッキングIDを入力Googleアナリティクスの使い方 | 必須の4機能 導入が完了したら、実際にGoogleアナリティクスを使ってみましょう。 Googleアナリティクスは項目が多くて一見複雑そうですが、実はチェックするべき機能はたったの4つです。 以下では、「ユーザー」「集客」「行動」「コンバージョン」という基本的な機能について概要を説明していきます。
+1) 「ユーザー」メニュー まずは「ユーザー」です。 このメニューでは、サイトの訪問数(セッション数)やページビュー数、使用しているデバイスなど、ユーザーに関する幅広いデータを見ることができます。
+まずは「概要」をクリックしてみてください。
+image-20210805113010113
+アクセス解析において、まずはこの「概要」ページでサイト全体の訪問者数を確認することがはじめの一歩となります。 その後ページ毎の分析の際にも、サイト全体の平均と比べてどうなのか、という視点が大事です。 アクセス解析において最もお世話になるのがこの「概要」メニューと言っても差し支えないでしょう。
+次に、「モバイル」&amp;gt;「概要」をクリックしてみてましょう。
+image-20210805113032306
+ここではユーザーの使用しているデバイス(パソコン・スマホ)が何なのかがわかります。 この項目をきちんとチェックすることで、施策の優先度を見極めることができます。 たとえばスマホユーザーが多いので、スマホ用サイトを優先的に改善するなどの意思決定ができます。
+2) 「集客」メニュー 「集客」メニューでは、ユーザーサイトにどこから訪れたかがわかります。 具体的には、「Google検索で流入した」「Facebook広告から流入した」などがわかります。
+「集客」&amp;gt;「すべてのトラフィック」&amp;gt;「チャネル」を確認してみましょう。
+image-20210805113057889
+「集客」チャネルでは以下のデータを確認することができます。
+   Organic Search Google、Yahooなどで検索してサイトに流入した訪問     Paid Search 検索後、リスティング広告などをクリックしてサイトに流入した訪問   Direct URLを直接入力したり、ブックマークからサイトに流入した訪問   Referral 他のサイトのリンクをクリックしてサイトに流入した訪問   Social FacebookやTwitterなどのSNSからサイトに流入にした訪問   Display バナー広告をクリックしてサイトに流入した訪問   Other その他    3) 「行動」メニュー 「集客」メニューがユーザーのサイト訪問前の行動を確認するために役立つのに対して、「行動」メニューではユーザーのサイト内での行動データをチェックできます。 まずは「サイトコンテンツ」&amp;gt;「すべてのページ」を見てみましょう。'><title>このブログにGoogleアナリティクスを導入してみた</title>
+
+<link rel='canonical' href='https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='このブログにGoogleアナリティクスを導入してみた'>
+<meta property='og:description' content='googleアナリティクスとは基本無料のサイト解析サービスでして、
+登録したサイトへアクセスしたユーザーがとった行動に関するデータが見れます。例えば、
+「サイトの訪問者数はどれくらいか」
+「どのページがよく見られているのか」
+「訪問者はどこから来たのか」
+「使われたデバイスはスマホかパソコンか」
+などなどです。
+googleアナリティクスの始め方 1) Googleアカウントを作成しログインしておく とはいっても既に持っている人が多いと思うので割愛します。
+2) Googleアナリティクスアカウントを作成 次にGoogleアナリティクスアカウントを作成します。ここでは分析したいサイトのURLなどを入力し、トラッキングコードと呼ばれるタグを取得します。 このトラッキングコードをページのHTMLに設置し、それが読み込まれることで、Googleアナリティクスでデータを計測できるようになります。
+3) トラッキングコードを設置 最後に、先ほど取得したトラッキングコードを全てのページに設置します。
+またHUGOでブログを作っている方は、トラッキングコード内のトラッキングIDをコピーし「config.yaml」などのconfigファイルに以下を追記しコンパイルすると完了します。
+# GA Tracking IDgoogleAnalytics:&amp;#34;UA-123456789-1&amp;#34;#トラッキングIDを入力Googleアナリティクスの使い方 | 必須の4機能 導入が完了したら、実際にGoogleアナリティクスを使ってみましょう。 Googleアナリティクスは項目が多くて一見複雑そうですが、実はチェックするべき機能はたったの4つです。 以下では、「ユーザー」「集客」「行動」「コンバージョン」という基本的な機能について概要を説明していきます。
+1) 「ユーザー」メニュー まずは「ユーザー」です。 このメニューでは、サイトの訪問数(セッション数)やページビュー数、使用しているデバイスなど、ユーザーに関する幅広いデータを見ることができます。
+まずは「概要」をクリックしてみてください。
+image-20210805113010113
+アクセス解析において、まずはこの「概要」ページでサイト全体の訪問者数を確認することがはじめの一歩となります。 その後ページ毎の分析の際にも、サイト全体の平均と比べてどうなのか、という視点が大事です。 アクセス解析において最もお世話になるのがこの「概要」メニューと言っても差し支えないでしょう。
+次に、「モバイル」&amp;gt;「概要」をクリックしてみてましょう。
+image-20210805113032306
+ここではユーザーの使用しているデバイス(パソコン・スマホ)が何なのかがわかります。 この項目をきちんとチェックすることで、施策の優先度を見極めることができます。 たとえばスマホユーザーが多いので、スマホ用サイトを優先的に改善するなどの意思決定ができます。
+2) 「集客」メニュー 「集客」メニューでは、ユーザーサイトにどこから訪れたかがわかります。 具体的には、「Google検索で流入した」「Facebook広告から流入した」などがわかります。
+「集客」&amp;gt;「すべてのトラフィック」&amp;gt;「チャネル」を確認してみましょう。
+image-20210805113057889
+「集客」チャネルでは以下のデータを確認することができます。
+   Organic Search Google、Yahooなどで検索してサイトに流入した訪問     Paid Search 検索後、リスティング広告などをクリックしてサイトに流入した訪問   Direct URLを直接入力したり、ブックマークからサイトに流入した訪問   Referral 他のサイトのリンクをクリックしてサイトに流入した訪問   Social FacebookやTwitterなどのSNSからサイトに流入にした訪問   Display バナー広告をクリックしてサイトに流入した訪問   Other その他    3) 「行動」メニュー 「集客」メニューがユーザーのサイト訪問前の行動を確認するために役立つのに対して、「行動」メニューではユーザーのサイト内での行動データをチェックできます。 まずは「サイトコンテンツ」&amp;gt;「すべてのページ」を見てみましょう。'>
+<meta property='og:url' content='https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/'>
+<meta property='og:site_name' content='むーさんDiary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='google' /><meta property='article:tag' content='アナリティクス' /><meta property='article:tag' content='Analytics' /><meta property='article:published_time' content='2021-08-05T10:27:45&#43;09:00'/><meta property='article:modified_time' content='2021-08-05T10:27:45&#43;09:00'/><meta property='og:image' content='https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805114251653.png' />
+<meta name="twitter:site" content="@https://twitter.com/musan_free">
+    <meta name="twitter:creator" content="@https://twitter.com/musan_free"><meta name="twitter:title" content="このブログにGoogleアナリティクスを導入してみた">
+<meta name="twitter:description" content="googleアナリティクスとは基本無料のサイト解析サービスでして、
+登録したサイトへアクセスしたユーザーがとった行動に関するデータが見れます。例えば、
+「サイトの訪問者数はどれくらいか」
+「どのページがよく見られているのか」
+「訪問者はどこから来たのか」
+「使われたデバイスはスマホかパソコンか」
+などなどです。
+googleアナリティクスの始め方 1) Googleアカウントを作成しログインしておく とはいっても既に持っている人が多いと思うので割愛します。
+2) Googleアナリティクスアカウントを作成 次にGoogleアナリティクスアカウントを作成します。ここでは分析したいサイトのURLなどを入力し、トラッキングコードと呼ばれるタグを取得します。 このトラッキングコードをページのHTMLに設置し、それが読み込まれることで、Googleアナリティクスでデータを計測できるようになります。
+3) トラッキングコードを設置 最後に、先ほど取得したトラッキングコードを全てのページに設置します。
+またHUGOでブログを作っている方は、トラッキングコード内のトラッキングIDをコピーし「config.yaml」などのconfigファイルに以下を追記しコンパイルすると完了します。
+# GA Tracking IDgoogleAnalytics:&amp;#34;UA-123456789-1&amp;#34;#トラッキングIDを入力Googleアナリティクスの使い方 | 必須の4機能 導入が完了したら、実際にGoogleアナリティクスを使ってみましょう。 Googleアナリティクスは項目が多くて一見複雑そうですが、実はチェックするべき機能はたったの4つです。 以下では、「ユーザー」「集客」「行動」「コンバージョン」という基本的な機能について概要を説明していきます。
+1) 「ユーザー」メニュー まずは「ユーザー」です。 このメニューでは、サイトの訪問数(セッション数)やページビュー数、使用しているデバイスなど、ユーザーに関する幅広いデータを見ることができます。
+まずは「概要」をクリックしてみてください。
+image-20210805113010113
+アクセス解析において、まずはこの「概要」ページでサイト全体の訪問者数を確認することがはじめの一歩となります。 その後ページ毎の分析の際にも、サイト全体の平均と比べてどうなのか、という視点が大事です。 アクセス解析において最もお世話になるのがこの「概要」メニューと言っても差し支えないでしょう。
+次に、「モバイル」&amp;gt;「概要」をクリックしてみてましょう。
+image-20210805113032306
+ここではユーザーの使用しているデバイス(パソコン・スマホ)が何なのかがわかります。 この項目をきちんとチェックすることで、施策の優先度を見極めることができます。 たとえばスマホユーザーが多いので、スマホ用サイトを優先的に改善するなどの意思決定ができます。
+2) 「集客」メニュー 「集客」メニューでは、ユーザーサイトにどこから訪れたかがわかります。 具体的には、「Google検索で流入した」「Facebook広告から流入した」などがわかります。
+「集客」&amp;gt;「すべてのトラフィック」&amp;gt;「チャネル」を確認してみましょう。
+image-20210805113057889
+「集客」チャネルでは以下のデータを確認することができます。
+   Organic Search Google、Yahooなどで検索してサイトに流入した訪問     Paid Search 検索後、リスティング広告などをクリックしてサイトに流入した訪問   Direct URLを直接入力したり、ブックマークからサイトに流入した訪問   Referral 他のサイトのリンクをクリックしてサイトに流入した訪問   Social FacebookやTwitterなどのSNSからサイトに流入にした訪問   Display バナー広告をクリックしてサイトに流入した訪問   Other その他    3) 「行動」メニュー 「集客」メニューがユーザーのサイト訪問前の行動を確認するために役立つのに対して、「行動」メニューではユーザーのサイト内での行動データをチェックできます。 まずは「サイトコンテンツ」&amp;gt;「すべてのページ」を見てみましょう。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805114251653.png' />
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-176391443-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<style>
+        
+    :root {
+        --base-font-family: "Noto Sans JP", var(--sys-font-family), var(--zh-font-family), sans-serif;
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap";
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);        
+    }());
+</script>
+
+<script data-ad-client="ca-pub-1181790212301891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu43cec17023671785a76c5dde11ef1ccf_3208_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://shortbread2329.github.io/">むーさんDiary</a></h1>
+        <h2 class="site-description">プログラミングや一人暮らし向け料理やお菓子作りを中心としたブログを載せていきます。</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>ホーム</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>自己紹介</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>ダークモード</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://shortbread2329.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/">
+                <img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805114251653_hu298f8af8a273c365e2bd91407742fd3c_417502_800x0_resize_box_2.png"
+                        srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805114251653_hu298f8af8a273c365e2bd91407742fd3c_417502_800x0_resize_box_2.png 800w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805114251653_hu298f8af8a273c365e2bd91407742fd3c_417502_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="163" 
+                        loading="lazy"
+                        alt="Featured image of post このブログにGoogleアナリティクスを導入してみた" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" >
+                プログラミング
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/">このブログにGoogleアナリティクスを導入してみた</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 05, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>googleアナリティクスとは基本無料の<strong>サイト解析サービス</strong>でして、</p>
+<p>登録したサイトへアクセスしたユーザーがとった行動に関するデータが見れます。例えば、</p>
+<p>「サイトの訪問者数はどれくらいか」</p>
+<p>「どのページがよく見られているのか」</p>
+<p>「訪問者はどこから来たのか」</p>
+<p>「使われたデバイスはスマホかパソコンか」</p>
+<p>などなどです。</p>
+<h2 id="googleアナリティクスの始め方">googleアナリティクスの始め方</h2>
+<h3 id="1-googleアカウントを作成しログインしておく">1) Googleアカウントを作成しログインしておく</h3>
+<p>とはいっても既に持っている人が多いと思うので割愛します。</p>
+<h3 id="2-googleアナリティクスアカウントを作成">2) Googleアナリティクスアカウントを作成</h3>
+<p>次にGoogleアナリティクスアカウントを作成します。ここでは分析したいサイトのURLなどを入力し、トラッキングコードと呼ばれるタグを取得します。
+このトラッキングコードをページのHTMLに設置し、それが読み込まれることで、Googleアナリティクスでデータを計測できるようになります。</p>
+<h3 id="3-トラッキングコードを設置">3) トラッキングコードを設置</h3>
+<p>最後に、先ほど取得したトラッキングコードを全てのページに設置します。</p>
+<p>またHUGOでブログを作っている方は、トラッキングコード内のトラッキングIDをコピーし「config.yaml」などのconfigファイルに以下を追記しコンパイルすると完了します。</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># GA Tracking ID</span><span class="w">
+</span><span class="w"></span><span class="nt">googleAnalytics</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;UA-123456789-1&#34;</span><span class="w"> </span><span class="c">#トラッキングIDを入力</span><span class="w">
+</span></code></pre></div><h2 id="googleアナリティクスの使い方--必須の4機能">Googleアナリティクスの使い方 | 必須の4機能</h2>
+<p>導入が完了したら、実際にGoogleアナリティクスを使ってみましょう。
+Googleアナリティクスは項目が多くて一見複雑そうですが、実はチェックするべき機能はたったの4つです。
+以下では、「ユーザー」「集客」「行動」「コンバージョン」という基本的な機能について概要を説明していきます。</p>
+<h3 id="1-ユーザーメニュー">1) 「ユーザー」メニュー</h3>
+<p>まずは「ユーザー」です。
+このメニューでは、サイトの訪問数(セッション数)やページビュー数、使用しているデバイスなど、ユーザーに関する幅広いデータを見ることができます。</p>
+<p>まずは「概要」をクリックしてみてください。</p>
+<p><figure style="flex-grow: 231; flex-basis: 556px">
+		<a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113.png" data-size="1241x535"><img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113.png"
+				srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_480x0_resize_box_2.png 480w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_1024x0_resize_box_2.png 1024w"
+				width="1241"
+				height="535"
+				loading="lazy"
+				alt="image-20210805113010113">
+		</a>
+		
+		<figcaption>image-20210805113010113</figcaption>
+		
+	</figure></p>
+<p>アクセス解析において、まずはこの「概要」ページでサイト全体の訪問者数を確認することがはじめの一歩となります。
+その後ページ毎の分析の際にも、サイト全体の平均と比べてどうなのか、という視点が大事です。
+アクセス解析において最もお世話になるのがこの「概要」メニューと言っても差し支えないでしょう。</p>
+<p>次に、「モバイル」&gt;「概要」をクリックしてみてましょう。</p>
+<p><figure style="flex-grow: 231; flex-basis: 556px">
+		<a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306.png" data-size="1241x535"><img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306.png"
+				srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_480x0_resize_box_2.png 480w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_1024x0_resize_box_2.png 1024w"
+				width="1241"
+				height="535"
+				loading="lazy"
+				alt="image-20210805113032306">
+		</a>
+		
+		<figcaption>image-20210805113032306</figcaption>
+		
+	</figure></p>
+<p>ここではユーザーの使用しているデバイス(パソコン・スマホ)が何なのかがわかります。
+この項目をきちんとチェックすることで、施策の優先度を見極めることができます。
+たとえばスマホユーザーが多いので、スマホ用サイトを優先的に改善するなどの意思決定ができます。</p>
+<h3 id="2-集客メニュー">2) 「集客」メニュー</h3>
+<p>「集客」メニューでは、ユーザーサイトにどこから訪れたかがわかります。
+具体的には、「Google検索で流入した」「Facebook広告から流入した」などがわかります。</p>
+<p>「集客」&gt;「すべてのトラフィック」&gt;「チャネル」を確認してみましょう。</p>
+<p><figure style="flex-grow: 231; flex-basis: 556px">
+		<a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889.png" data-size="1241x535"><img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889.png"
+				srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_480x0_resize_box_2.png 480w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_1024x0_resize_box_2.png 1024w"
+				width="1241"
+				height="535"
+				loading="lazy"
+				alt="image-20210805113057889">
+		</a>
+		
+		<figcaption>image-20210805113057889</figcaption>
+		
+	</figure></p>
+<p>「集客」チャネルでは以下のデータを確認することができます。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Organic Search</th>
+<th>Google、Yahooなどで検索してサイトに流入した訪問</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Paid Search</td>
+<td>検索後、リスティング広告などをクリックしてサイトに流入した訪問</td>
+</tr>
+<tr>
+<td style="text-align:left">Direct</td>
+<td>URLを直接入力したり、ブックマークからサイトに流入した訪問</td>
+</tr>
+<tr>
+<td style="text-align:left">Referral</td>
+<td>他のサイトのリンクをクリックしてサイトに流入した訪問</td>
+</tr>
+<tr>
+<td style="text-align:left">Social</td>
+<td>FacebookやTwitterなどのSNSからサイトに流入にした訪問</td>
+</tr>
+<tr>
+<td style="text-align:left">Display</td>
+<td>バナー広告をクリックしてサイトに流入した訪問</td>
+</tr>
+<tr>
+<td style="text-align:left">Other</td>
+<td>その他</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-行動メニュー">3) 「行動」メニュー</h3>
+<p>「集客」メニューがユーザーのサイト訪問前の行動を確認するために役立つのに対して、「行動」メニューではユーザーのサイト内での行動データをチェックできます。
+まずは「サイトコンテンツ」&gt;「すべてのページ」を見てみましょう。</p>
+<p><figure style="flex-grow: 266; flex-basis: 639px">
+		<a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7.png" data-size="1334x501"><img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7.png"
+				srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7_hu46894d56c78b026f3e5f6dc5c18dac02_77406_480x0_resize_box_2.png 480w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7_hu46894d56c78b026f3e5f6dc5c18dac02_77406_1024x0_resize_box_2.png 1024w"
+				width="1334"
+				height="501"
+				loading="lazy"
+				alt="「サイトコンテンツ」&gt;「すべてのページ」">
+		</a>
+		
+		<figcaption>「サイトコンテンツ」&gt;「すべてのページ」</figcaption>
+		
+	</figure></p>
+<p>サイト内のすべてのページのPV数やセッション数などを確認することができます。</p>
+<p>次に「サイトコンテンツ」&gt;「ランディングページ」をクリックしてみましょう。</p>
+<p><figure style="flex-grow: 259; flex-basis: 623px">
+		<a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf.png" data-size="1338x515"><img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf.png"
+				srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf_hu13cc0df8205ca3248a88d0701999f95d_67369_480x0_resize_box_2.png 480w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf_hu13cc0df8205ca3248a88d0701999f95d_67369_1024x0_resize_box_2.png 1024w"
+				width="1338"
+				height="515"
+				loading="lazy"
+				alt="「サイトコンテンツ」&gt;「ランディングページ」をクリック">
+		</a>
+		
+		<figcaption>「サイトコンテンツ」&gt;「ランディングページ」をクリック</figcaption>
+		
+	</figure></p>
+<p>ここではランディングページごとのセッション数などが見られます。
+ランディングページとは、サイトに流入したときの最初のページで、サイトの入口となるページのことです。</p>
+<h3 id="4-コンバージョンメニュー">4) 「コンバージョン」メニュー</h3>
+<p>コンバージョンとは、会員登録や商品購入など、そのサイトの目標のことです。
+「コンバージョン」メニューでは、このコンバージョンの数を見ることができます。</p>
+<p><figure style="flex-grow: 274; flex-basis: 658px">
+		<a href="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f.png" data-size="1339x488"><img src="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f.png"
+				srcset="/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f_hu2f6c62c0d3df46e324db43baac82a109_49414_480x0_resize_box_2.png 480w, /p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f_hu2f6c62c0d3df46e324db43baac82a109_49414_1024x0_resize_box_2.png 1024w"
+				width="1339"
+				height="488"
+				loading="lazy"
+				alt="「コンバージョン」メニュー">
+		</a>
+		
+		<figcaption>「コンバージョン」メニュー</figcaption>
+		
+	</figure></p>
+<p>アクセス解析やサイト改善はこのコンバージョンを増やすための手段です。常にチェックしておきましょう。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/google/">google</a>
+        
+            <a href="/tags/%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9/">アナリティクス</a>
+        
+            <a href="/tags/analytics/">Analytics</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed musan</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-otiu1ubwtc" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 むーさんDiary
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

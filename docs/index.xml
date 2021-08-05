@@ -6,7 +6,170 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Wed, 04 Aug 2021 13:24:53 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Aug 2021 10:27:45 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>このブログにGoogleアナリティクスを導入してみた</title>
+        <link>https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
+        <pubDate>Thu, 05 Aug 2021 10:27:45 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
+        <description>&lt;img src="https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805114251653.png" alt="Featured image of post このブログにGoogleアナリティクスを導入してみた" /&gt;&lt;p&gt;googleアナリティクスとは基本無料の&lt;strong&gt;サイト解析サービス&lt;/strong&gt;でして、&lt;/p&gt;
+&lt;p&gt;登録したサイトへアクセスしたユーザーがとった行動に関するデータが見れます。例えば、&lt;/p&gt;
+&lt;p&gt;「サイトの訪問者数はどれくらいか」&lt;/p&gt;
+&lt;p&gt;「どのページがよく見られているのか」&lt;/p&gt;
+&lt;p&gt;「訪問者はどこから来たのか」&lt;/p&gt;
+&lt;p&gt;「使われたデバイスはスマホかパソコンか」&lt;/p&gt;
+&lt;p&gt;などなどです。&lt;/p&gt;
+&lt;h2 id=&#34;googleアナリティクスの始め方&#34;&gt;googleアナリティクスの始め方&lt;/h2&gt;
+&lt;h3 id=&#34;1-googleアカウントを作成しログインしておく&#34;&gt;1) Googleアカウントを作成しログインしておく&lt;/h3&gt;
+&lt;p&gt;とはいっても既に持っている人が多いと思うので割愛します。&lt;/p&gt;
+&lt;h3 id=&#34;2-googleアナリティクスアカウントを作成&#34;&gt;2) Googleアナリティクスアカウントを作成&lt;/h3&gt;
+&lt;p&gt;次にGoogleアナリティクスアカウントを作成します。ここでは分析したいサイトのURLなどを入力し、トラッキングコードと呼ばれるタグを取得します。
+このトラッキングコードをページのHTMLに設置し、それが読み込まれることで、Googleアナリティクスでデータを計測できるようになります。&lt;/p&gt;
+&lt;h3 id=&#34;3-トラッキングコードを設置&#34;&gt;3) トラッキングコードを設置&lt;/h3&gt;
+&lt;p&gt;最後に、先ほど取得したトラッキングコードを全てのページに設置します。&lt;/p&gt;
+&lt;p&gt;またHUGOでブログを作っている方は、トラッキングコード内のトラッキングIDをコピーし「config.yaml」などのconfigファイルに以下を追記しコンパイルすると完了します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;c&#34;&gt;# GA Tracking ID&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;googleAnalytics&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;UA-123456789-1&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#トラッキングIDを入力&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;googleアナリティクスの使い方--必須の4機能&#34;&gt;Googleアナリティクスの使い方 | 必須の4機能&lt;/h2&gt;
+&lt;p&gt;導入が完了したら、実際にGoogleアナリティクスを使ってみましょう。
+Googleアナリティクスは項目が多くて一見複雑そうですが、実はチェックするべき機能はたったの4つです。
+以下では、「ユーザー」「集客」「行動」「コンバージョン」という基本的な機能について概要を説明していきます。&lt;/p&gt;
+&lt;h3 id=&#34;1-ユーザーメニュー&#34;&gt;1) 「ユーザー」メニュー&lt;/h3&gt;
+&lt;p&gt;まずは「ユーザー」です。
+このメニューでは、サイトの訪問数(セッション数)やページビュー数、使用しているデバイスなど、ユーザーに関する幅広いデータを見ることができます。&lt;/p&gt;
+&lt;p&gt;まずは「概要」をクリックしてみてください。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 231; flex-basis: 556px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113.png&#34; data-size=&#34;1241x535&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113010113_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1241&#34;
+				height=&#34;535&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210805113010113&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210805113010113&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;アクセス解析において、まずはこの「概要」ページでサイト全体の訪問者数を確認することがはじめの一歩となります。
+その後ページ毎の分析の際にも、サイト全体の平均と比べてどうなのか、という視点が大事です。
+アクセス解析において最もお世話になるのがこの「概要」メニューと言っても差し支えないでしょう。&lt;/p&gt;
+&lt;p&gt;次に、「モバイル」&amp;gt;「概要」をクリックしてみてましょう。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 231; flex-basis: 556px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306.png&#34; data-size=&#34;1241x535&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113032306_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1241&#34;
+				height=&#34;535&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210805113032306&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210805113032306&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;ここではユーザーの使用しているデバイス(パソコン・スマホ)が何なのかがわかります。
+この項目をきちんとチェックすることで、施策の優先度を見極めることができます。
+たとえばスマホユーザーが多いので、スマホ用サイトを優先的に改善するなどの意思決定ができます。&lt;/p&gt;
+&lt;h3 id=&#34;2-集客メニュー&#34;&gt;2) 「集客」メニュー&lt;/h3&gt;
+&lt;p&gt;「集客」メニューでは、ユーザーサイトにどこから訪れたかがわかります。
+具体的には、「Google検索で流入した」「Facebook広告から流入した」などがわかります。&lt;/p&gt;
+&lt;p&gt;「集客」&amp;gt;「すべてのトラフィック」&amp;gt;「チャネル」を確認してみましょう。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 231; flex-basis: 556px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889.png&#34; data-size=&#34;1241x535&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image-20210805113057889_huf7e12ba1b56751021315bfcbc4f0ad9d_107375_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1241&#34;
+				height=&#34;535&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;image-20210805113057889&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;image-20210805113057889&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;「集客」チャネルでは以下のデータを確認することができます。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Organic Search&lt;/th&gt;
+&lt;th&gt;Google、Yahooなどで検索してサイトに流入した訪問&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Paid Search&lt;/td&gt;
+&lt;td&gt;検索後、リスティング広告などをクリックしてサイトに流入した訪問&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Direct&lt;/td&gt;
+&lt;td&gt;URLを直接入力したり、ブックマークからサイトに流入した訪問&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Referral&lt;/td&gt;
+&lt;td&gt;他のサイトのリンクをクリックしてサイトに流入した訪問&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Social&lt;/td&gt;
+&lt;td&gt;FacebookやTwitterなどのSNSからサイトに流入にした訪問&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Display&lt;/td&gt;
+&lt;td&gt;バナー広告をクリックしてサイトに流入した訪問&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Other&lt;/td&gt;
+&lt;td&gt;その他&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-行動メニュー&#34;&gt;3) 「行動」メニュー&lt;/h3&gt;
+&lt;p&gt;「集客」メニューがユーザーのサイト訪問前の行動を確認するために役立つのに対して、「行動」メニューではユーザーのサイト内での行動データをチェックできます。
+まずは「サイトコンテンツ」&amp;gt;「すべてのページ」を見てみましょう。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 266; flex-basis: 639px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7.png&#34; data-size=&#34;1334x501&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7_hu46894d56c78b026f3e5f6dc5c18dac02_77406_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/image7_hu46894d56c78b026f3e5f6dc5c18dac02_77406_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1334&#34;
+				height=&#34;501&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;「サイトコンテンツ」&amp;gt;「すべてのページ」&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;「サイトコンテンツ」&amp;gt;「すべてのページ」&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;サイト内のすべてのページのPV数やセッション数などを確認することができます。&lt;/p&gt;
+&lt;p&gt;次に「サイトコンテンツ」&amp;gt;「ランディングページ」をクリックしてみましょう。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 259; flex-basis: 623px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf.png&#34; data-size=&#34;1338x515&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf_hu13cc0df8205ca3248a88d0701999f95d_67369_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/2d423af7c28841ff2b0c1319e6f805bf_hu13cc0df8205ca3248a88d0701999f95d_67369_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1338&#34;
+				height=&#34;515&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;「サイトコンテンツ」&amp;gt;「ランディングページ」をクリック&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;「サイトコンテンツ」&amp;gt;「ランディングページ」をクリック&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;ここではランディングページごとのセッション数などが見られます。
+ランディングページとは、サイトに流入したときの最初のページで、サイトの入口となるページのことです。&lt;/p&gt;
+&lt;h3 id=&#34;4-コンバージョンメニュー&#34;&gt;4) 「コンバージョン」メニュー&lt;/h3&gt;
+&lt;p&gt;コンバージョンとは、会員登録や商品購入など、そのサイトの目標のことです。
+「コンバージョン」メニューでは、このコンバージョンの数を見ることができます。&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 274; flex-basis: 658px&#34;&gt;
+		&lt;a href=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f.png&#34; data-size=&#34;1339x488&#34;&gt;&lt;img src=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f.png&#34;
+				srcset=&#34;https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f_hu2f6c62c0d3df46e324db43baac82a109_49414_480x0_resize_box_2.png 480w, https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/ddb788944c69f3282ea225a5e658063f_hu2f6c62c0d3df46e324db43baac82a109_49414_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1339&#34;
+				height=&#34;488&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;「コンバージョン」メニュー&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;「コンバージョン」メニュー&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;アクセス解析やサイト改善はこのコンバージョンを増やすための手段です。常にチェックしておきましょう。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>用途別、データ分析の考え方</title>
         <link>https://shortbread2329.github.io/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/</link>
         <pubDate>Wed, 04 Aug 2021 13:24:53 +0900</pubDate>
