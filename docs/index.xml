@@ -6,7 +6,42 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Thu, 05 Aug 2021 10:27:45 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 Aug 2021 01:45:14 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>豆乳きなこラテ</title>
+        <link>https://shortbread2329.github.io/p/%E8%B1%86%E4%B9%B3%E3%81%8D%E3%81%AA%E3%81%93%E3%83%A9%E3%83%86/</link>
+        <pubDate>Sun, 08 Aug 2021 01:45:14 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/p/%E8%B1%86%E4%B9%B3%E3%81%8D%E3%81%AA%E3%81%93%E3%83%A9%E3%83%86/</guid>
+        <description>&lt;img src="https://shortbread2329.github.io/p/%E8%B1%86%E4%B9%B3%E3%81%8D%E3%81%AA%E3%81%93%E3%83%A9%E3%83%86/2021-08-08-18-37-11-255.jpg" alt="Featured image of post 豆乳きなこラテ" /&gt;&lt;p&gt;勉強などの作業をしているとこの時期はアイスコーヒーが進んでしまいますよね。&lt;/p&gt;
+&lt;p&gt;うっかり飲みすぎてカフェインの取りすぎが気になるそんなあなたに、&lt;/p&gt;
+&lt;p&gt;おうちで豆乳ドリンクを作ってみてはどうでしょうか！？&lt;/p&gt;
+&lt;h2 id=&#34;作り方&#34;&gt;作り方&lt;/h2&gt;
+&lt;h3 id=&#34;材料を以下の順で入れ溶け切るまで混ぜます&#34;&gt;材料を以下の順で入れ、溶け切るまで混ぜます。&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;黒糖(または黒蜜)　大匙1&lt;/li&gt;
+&lt;li&gt;きなこ 大匙2&lt;/li&gt;
+&lt;li&gt;豆乳　200cc(コップ1杯ぐらい)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;コップの表面に追いきなこをトッピングして完成です&#34;&gt;コップの表面に追いきなこをトッピングして完成です。&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;きなこ　好きなだけ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;アレンジ例&#34;&gt;アレンジ例&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;トッピング前にマシュマロを載せ、レンジで温めトッピングすると、冬もホットでおいしくいただけます。&lt;/li&gt;
+&lt;li&gt;粉プロテインがとりたい場合は以下の分量に変更しシェイカーで混ぜるとよく溶けます。
+&lt;ul&gt;
+&lt;li&gt;黒糖　大匙１&lt;/li&gt;
+&lt;li&gt;きなこ　大匙２&lt;/li&gt;
+&lt;li&gt;粉プロテインプレーン　1杯の分量通り&lt;/li&gt;
+&lt;li&gt;水　100cc&lt;/li&gt;
+&lt;li&gt;豆乳　100cc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>このブログにGoogleアナリティクスを導入してみた</title>
         <link>https://shortbread2329.github.io/p/%E3%81%93%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%81%ABgoogle%E3%82%A2%E3%83%8A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
         <pubDate>Thu, 05 Aug 2021 10:27:45 +0900</pubDate>
@@ -849,27 +884,6 @@ cat ~/.ssh/id_rsa.pub
 &lt;p&gt;どろどろ半熟の状態で、黄身が流れてしまうので、&lt;/p&gt;
 &lt;p&gt;焼き加減を改善したいなと思ってます。&lt;/p&gt;
 &lt;p&gt;またレシピが改善したら投稿しますのでぜひご期待ください！&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Pythonスクリプトに自動でブログ記事を書いてもらう。</title>
-        <link>https://shortbread2329.github.io/p/python%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AB%E8%87%AA%E5%8B%95%E3%81%A7%E3%83%96%E3%83%AD%E3%82%B0%E8%A8%98%E4%BA%8B%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%82%E3%82%89%E3%81%86/</link>
-        <pubDate>Mon, 14 Jun 2021 07:31:57 +0900</pubDate>
-        
-        <guid>https://shortbread2329.github.io/p/python%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AB%E8%87%AA%E5%8B%95%E3%81%A7%E3%83%96%E3%83%AD%E3%82%B0%E8%A8%98%E4%BA%8B%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%82%82%E3%82%89%E3%81%86/</guid>
-        <description>&lt;p&gt;ブログを始めて1週間が経過しようとしてます。&lt;/p&gt;
-&lt;p&gt;正直1週間は毎日投稿したい気持ちでしたが、&lt;/p&gt;
-&lt;p&gt;飽き症な私にとって&lt;strong&gt;毎日投稿は難しかった&lt;/strong&gt;みたいです。&lt;/p&gt;
-&lt;p&gt;そんなあるとき私が買っている投資信託の状況を確認していたのですが、&lt;/p&gt;
-&lt;p&gt;これを元にブログ記事を誰か書いてくれていたらなあ～&lt;/p&gt;
-&lt;p&gt;あ、できるかも？と思って今回挑戦してみます。&lt;/p&gt;
-&lt;p&gt;まずやることは、&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HugoでのBlog環境構築&lt;/li&gt;
-&lt;li&gt;pythonでデータ分析し、マークダウン形式で出力する。&lt;/li&gt;
-&lt;li&gt;タスクスケジュールを行う&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;の3つです。頑張る箇所は「pythonでデータ分析し、マークダウン形式で出力する。」ですね。&lt;/p&gt;
 </description>
         </item>
         <item>

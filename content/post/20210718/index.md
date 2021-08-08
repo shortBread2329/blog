@@ -5,7 +5,7 @@ categories : [
 "プログラミング",
 ]
 tags : [
-"プログラミング",
+"Git",
 ]
 image: image-20210804135308649.png
 ---

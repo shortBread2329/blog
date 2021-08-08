@@ -2,12 +2,13 @@
 title: "Pythonスクリプトに自動でブログ記事を書いてもらう。"
 date: 2021-06-14T07:31:57+09:00
 categories : [
-    "programing"
+    "プログラミング"
 ]
 tags : [
     "python",
     "Dataframe"
 ]
+draft: true
 ---
 
 ブログを始めて1週間が経過しようとしてます。

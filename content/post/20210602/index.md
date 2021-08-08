@@ -2,7 +2,7 @@
 title: "GitHubPage + Hugo で最強ブログを作ろう(1/3)"
 date: 2021-06-02T09:34:11+09:00
 categories : [
-    programing,
+    "プログラミング",
 ]
 tags : [
     "markdown",
