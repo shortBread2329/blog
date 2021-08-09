@@ -6,7 +6,249 @@
         <description>Recent content on むーさんDiary</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Sun, 08 Aug 2021 01:45:14 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 09 Aug 2021 23:35:50 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SeleniumWebdriverチートシート</title>
+        <link>https://shortbread2329.github.io/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/</link>
+        <pubDate>Mon, 09 Aug 2021 23:35:50 +0900</pubDate>
+        
+        <guid>https://shortbread2329.github.io/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/</guid>
+        <description>&lt;h2 id=&#34;特定のurlでブラウザを起動する&#34;&gt;特定のURLでブラウザを起動する&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.get(&amp;quot;URL&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Url = &amp;quot;URL&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.get(&amp;quot;URL&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.get(&amp;quot;URL&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ページ遷移したいとき&#34;&gt;ページ遷移したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate().to(&amp;quot;URL&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Navigate().GoToUrl(&amp;quot;URL&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.get(&amp;quot;URL&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate.to(&amp;quot;URL&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;一つ前に戻りたいとき&#34;&gt;一つ前に戻りたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate().back();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Navigate().Back();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.back()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate.back 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;一つ前に進みたいとき&#34;&gt;一つ前に進みたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate().forward();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Navigate().Forward();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.forward()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate.forward 
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ブラウザを更新する&#34;&gt;ブラウザを更新する&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate().refresh();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Navigate().Refresh();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.refresh()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.navigate.refresh
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;現在のurlを知りたいとき&#34;&gt;現在のURLを知りたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.getCurrentUrl()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Url;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.current_url
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.current_url
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;タイトルを知りたいとき&#34;&gt;タイトルを知りたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.getTitle():
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Title;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.title
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.title
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ページのソースを取得したいとき&#34;&gt;ページのソースを取得したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.getPageSource();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.PageSource;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.page_source
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.page_source
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ウインドウを閉じたいとき&#34;&gt;ウインドウを閉じたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.close();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Close();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.close
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;すべてのウインドウを閉じたいとき&#34;&gt;すべてのウインドウを閉じたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.quit();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Quit();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.quit
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ある要素を取得したいとき&#34;&gt;ある要素を取得したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.className(&amp;quot;classname&amp;quot;)); //classでの指定
+driver.findElement(By.id(&amp;quot;id&amp;quot;)); //idでの指定
+driver.findElement(By.xpath(&amp;quot;xpath&amp;quot;)); //xpathでの指定
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.ClassName(&amp;quot;classname&amp;quot;)); //classでの指定
+driver.FindElement(By.Id(&amp;quot;id&amp;quot;)); //idでの指定
+driver.FindElement(By.Xpath(&amp;quot;xpath&amp;quot;)); //xpathでの指定
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_class_name(&amp;quot;classname&amp;quot;) # classでの指定
+driver.find_element_by_id(&amp;quot;id&amp;quot;) # idでの指定
+driver.find_element_by_xpath(&amp;quot;xpath&amp;quot;) # xpathでの指定
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:class, &amp;quot;classname&amp;quot;) # classでの指定
+driver.find_element(:id, &amp;quot;id&amp;quot;) # idでの指定
+driver.find_element(:xpath, &amp;quot;xpath&amp;quot;) # xpathでの指定
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ある要素をクリックしたいとき&#34;&gt;ある要素をクリックしたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.XPath(&amp;quot;XPATH&amp;quot;)).click();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.XPath(&amp;quot;XPATH&amp;quot;)).Click();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_xpath(&amp;quot;XPATH&amp;quot;).click()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:xpath, &amp;quot;XPATH&amp;quot;).click
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ある要素までスクロールしたいとき&#34;&gt;ある要素までスクロールしたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;WebElement element = driver.findElement(By.id(&amp;quot;ID&amp;quot;));
+Actions actions = new Actions(driver);
+actions.moveToElement(element);
+actions.perform();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var element = driver.FindElement(By.id(&amp;quot;ID&amp;quot;));
+Actions actions = new Actions(driver);
+actions.MoveToElement(element);
+actions.Perform();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains
+
+element = driver.find_element_by_id(&amp;quot;ID&amp;quot;)
+actions = ActionChains(driver)
+actions.move_to_element(element)
+actions.perform()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:id, &amp;quot;ID&amp;quot;).location_once_scrolled_into_view
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ドロップダウンを選択したいとき&#34;&gt;ドロップダウンを選択したいとき&lt;/h2&gt;
+&lt;p&gt;※Select Supportをimportする必要あり。&lt;/p&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;element = driver.findElement(By.xpath(&amp;quot;xpath&amp;quot;));
+Select(element).selectByIndex(indexnum); // indexで選択
+Select(element).selectByValue(&amp;quot;value&amp;quot;); // valueの値
+Select(element).selectByVisibleText(&amp;quot;text&amp;quot;); // 表示テキスト
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;element = driver.FindElement(By.Xpath(&amp;quot;xpath&amp;quot;));
+Select(element).SelectByIndex(indexnum); // indexで選択
+Select(element).SelectByValue(&amp;quot;value&amp;quot;); // valueの値
+Select(element).SelectByText(&amp;quot;text&amp;quot;); // 表示テキスト
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;element = driver.find_element_by_xpath(&amp;quot;xpath&amp;quot;)
+Select(element).select_by_index(indexnum) # indexで選択
+Select(element).select_by_value(&amp;quot;value&amp;quot;) # valueの値
+Select(element).select_by_visible_text(&amp;quot;text&amp;quot;) # 表示テキスト
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;element = driver.find_element(:xpath, &amp;quot;xpath&amp;quot;)
+Select(element).select_by(:index, indexnum) # indexで選択
+Select(element).select_by(:value, &amp;quot;value&amp;quot;) # valueの値
+Select(element).select_by(:text, &amp;quot;string&amp;quot;) # 表示テキスト
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;テキストを入力したいとき&#34;&gt;テキストを入力したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.id(&amp;quot;ID&amp;quot;)).sendKeys(&amp;quot;string&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.id(&amp;quot;ID&amp;quot;)).SendKeys(&amp;quot;string&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_id(&amp;quot;ID&amp;quot;).send_keys(&amp;quot;strings&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:id, &amp;quot;ID&amp;quot;).send_keys(&amp;quot;strings&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;テキストを取得したいとき&#34;&gt;テキストを取得したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.id(&amp;quot;ID&amp;quot;)).getText();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.id(&amp;quot;ID&amp;quot;)).Text;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_id(&amp;quot;ID&amp;quot;).text
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:id, &amp;quot;ID&amp;quot;).text
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;属性を取得したいとき&#34;&gt;属性を取得したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.id(&amp;quot;ID&amp;quot;)).getAttribute(&amp;quot;value&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.id(&amp;quot;ID&amp;quot;)).GetAttribute(&amp;quot;value&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_id(&amp;quot;ID&amp;quot;).get_attribute(&amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:id, &amp;quot;ID&amp;quot;).attribute(&amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;アラートをハンドリングしたいとき&#34;&gt;アラートをハンドリングしたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.switchTo().alert().accept();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.SwitchTo().Alert().Accept();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Alert(driver).accept()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.switch_to.alert.accept
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ウインドウサイズを最大にしたいとき&#34;&gt;ウインドウサイズを最大にしたいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.manage().window().maximize();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.Manage().Window().Maximize();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.maximize_window()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.manage.window.maximize
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;要素が表示されているかどうかを判定したいとき&#34;&gt;要素が表示されているかどうかを判定したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.xpath(&amp;quot;xpath&amp;quot;)).isDisplayed();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.Xpath(&amp;quot;xpath&amp;quot;)).Displayed(); 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_xpath(&amp;quot;xpath&amp;quot;).is_displayed()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:xpath, &amp;quot;xpath&amp;quot;).displayed?
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;要素が有効かどうかを判定したいとき&#34;&gt;要素が有効かどうかを判定したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.xpath(&amp;quot;xpath&amp;quot;)).isEnabled();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.Xpath(&amp;quot;xpath&amp;quot;)).Enabled(); 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_xpath(&amp;quot;xpath&amp;quot;).is_enabled()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:xpath, &amp;quot;xpath&amp;quot;).enabled?
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;要素が選択されているかどうかを判定したいとき&#34;&gt;要素が選択されているかどうかを判定したいとき&lt;/h2&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.findElement(By.xpath(&amp;quot;xpath&amp;quot;)).isSelected();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;C#&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.FindElement(By.Xpath(&amp;quot;xpath&amp;quot;)).Selected(); 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Python&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element_by_xpath(&amp;quot;xpath&amp;quot;).is_selected()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ruby&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;driver.find_element(:xpath, &amp;quot;xpath&amp;quot;).selected?
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+&lt;p&gt;間違ったものがあればご指摘頂ければ幸いです。
+要望があれば随時追加していきます。
+他にもみなさんが使うよく使いそうなメソッドがあれば教えてください。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>豆乳きなこラテ</title>
         <link>https://shortbread2329.github.io/p/%E8%B1%86%E4%B9%B3%E3%81%8D%E3%81%AA%E3%81%93%E3%83%A9%E3%83%86/</link>
         <pubDate>Sun, 08 Aug 2021 01:45:14 +0900</pubDate>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>selenium-webdriver on むーさんDiary</title>
+    <link>https://shortbread2329.github.io/tags/selenium-webdriver/</link>
+    <description>Recent content in selenium-webdriver on むーさんDiary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 09 Aug 2021 23:35:50 +0900</lastBuildDate><atom:link href="https://shortbread2329.github.io/tags/selenium-webdriver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SeleniumWebdriverチートシート</title>
+      <link>https://shortbread2329.github.io/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/</link>
+      <pubDate>Mon, 09 Aug 2021 23:35:50 +0900</pubDate>
+      
+      <guid>https://shortbread2329.github.io/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/</guid>
+      <description>特定のURLでブラウザを起動する Java
+driver.get(&amp;quot;URL&amp;quot;); C#
+driver.Url = &amp;quot;URL&amp;quot;; Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.get(&amp;quot;URL&amp;quot;) ページ遷移したいとき Java
+driver.navigate().to(&amp;quot;URL&amp;quot;); C#
+driver.Navigate().GoToUrl(&amp;quot;URL&amp;quot;); Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.navigate.to(&amp;quot;URL&amp;quot;) 一つ前に戻りたいとき Java
+driver.navigate().back(); C#
+driver.Navigate().Back(); Python
+driver.back() Ruby
+driver.navigate.back 一つ前に進みたいとき Java
+driver.navigate().forward(); C#
+driver.Navigate().Forward(); Python
+driver.forward() Ruby
+driver.navigate.forward ブラウザを更新する Java
+driver.navigate().refresh(); C#
+driver.Navigate().Refresh(); Python
+driver.refresh() Ruby
+driver.navigate.refresh 現在のURLを知りたいとき Java
+driver.getCurrentUrl() C#
+driver.Url; Python
+driver.current_url Ruby
+driver.current_url タイトルを知りたいとき Java
+driver.getTitle(): C#
+driver.Title; Python
+driver.title Ruby
+driver.title ページのソースを取得したいとき Java
+driver.getPageSource(); C#
+driver.PageSource; Python</description>
+    </item>
+    
+  </channel>
+</rss>

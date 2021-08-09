@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='特定のURLでブラウザを起動する Java
+driver.get(&amp;quot;URL&amp;quot;); C#
+driver.Url = &amp;quot;URL&amp;quot;; Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.get(&amp;quot;URL&amp;quot;) ページ遷移したいとき Java
+driver.navigate().to(&amp;quot;URL&amp;quot;); C#
+driver.Navigate().GoToUrl(&amp;quot;URL&amp;quot;); Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.navigate.to(&amp;quot;URL&amp;quot;) 一つ前に戻りたいとき Java
+driver.navigate().back(); C#
+driver.Navigate().Back(); Python
+driver.back() Ruby
+driver.navigate.back 一つ前に進みたいとき Java
+driver.navigate().forward(); C#
+driver.Navigate().Forward(); Python
+driver.forward() Ruby
+driver.navigate.forward ブラウザを更新する Java
+driver.navigate().refresh(); C#
+driver.Navigate().Refresh(); Python
+driver.refresh() Ruby
+driver.navigate.refresh 現在のURLを知りたいとき Java
+driver.getCurrentUrl() C#
+driver.Url; Python
+driver.current_url Ruby
+driver.current_url タイトルを知りたいとき Java
+driver.getTitle(): C#
+driver.Title; Python
+driver.title Ruby
+driver.title ページのソースを取得したいとき Java
+driver.getPageSource(); C#
+driver.PageSource; Python'><title>SeleniumWebdriverチートシート</title>
+
+<link rel='canonical' href='https://shortbread2329.github.io/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='SeleniumWebdriverチートシート'>
+<meta property='og:description' content='特定のURLでブラウザを起動する Java
+driver.get(&amp;quot;URL&amp;quot;); C#
+driver.Url = &amp;quot;URL&amp;quot;; Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.get(&amp;quot;URL&amp;quot;) ページ遷移したいとき Java
+driver.navigate().to(&amp;quot;URL&amp;quot;); C#
+driver.Navigate().GoToUrl(&amp;quot;URL&amp;quot;); Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.navigate.to(&amp;quot;URL&amp;quot;) 一つ前に戻りたいとき Java
+driver.navigate().back(); C#
+driver.Navigate().Back(); Python
+driver.back() Ruby
+driver.navigate.back 一つ前に進みたいとき Java
+driver.navigate().forward(); C#
+driver.Navigate().Forward(); Python
+driver.forward() Ruby
+driver.navigate.forward ブラウザを更新する Java
+driver.navigate().refresh(); C#
+driver.Navigate().Refresh(); Python
+driver.refresh() Ruby
+driver.navigate.refresh 現在のURLを知りたいとき Java
+driver.getCurrentUrl() C#
+driver.Url; Python
+driver.current_url Ruby
+driver.current_url タイトルを知りたいとき Java
+driver.getTitle(): C#
+driver.Title; Python
+driver.title Ruby
+driver.title ページのソースを取得したいとき Java
+driver.getPageSource(); C#
+driver.PageSource; Python'>
+<meta property='og:url' content='https://shortbread2329.github.io/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/'>
+<meta property='og:site_name' content='むーさんDiary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='selenium' /><meta property='article:tag' content='selenium-webdriver' /><meta property='article:tag' content='python' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='C#' /><meta property='article:tag' content='Ruby' /><meta property='article:published_time' content='2021-08-09T23:35:50&#43;09:00'/><meta property='article:modified_time' content='2021-08-09T23:35:50&#43;09:00'/>
+<meta name="twitter:site" content="@https://twitter.com/musan_free">
+    <meta name="twitter:creator" content="@https://twitter.com/musan_free"><meta name="twitter:title" content="SeleniumWebdriverチートシート">
+<meta name="twitter:description" content="特定のURLでブラウザを起動する Java
+driver.get(&amp;quot;URL&amp;quot;); C#
+driver.Url = &amp;quot;URL&amp;quot;; Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.get(&amp;quot;URL&amp;quot;) ページ遷移したいとき Java
+driver.navigate().to(&amp;quot;URL&amp;quot;); C#
+driver.Navigate().GoToUrl(&amp;quot;URL&amp;quot;); Python
+driver.get(&amp;quot;URL&amp;quot;) Ruby
+driver.navigate.to(&amp;quot;URL&amp;quot;) 一つ前に戻りたいとき Java
+driver.navigate().back(); C#
+driver.Navigate().Back(); Python
+driver.back() Ruby
+driver.navigate.back 一つ前に進みたいとき Java
+driver.navigate().forward(); C#
+driver.Navigate().Forward(); Python
+driver.forward() Ruby
+driver.navigate.forward ブラウザを更新する Java
+driver.navigate().refresh(); C#
+driver.Navigate().Refresh(); Python
+driver.refresh() Ruby
+driver.navigate.refresh 現在のURLを知りたいとき Java
+driver.getCurrentUrl() C#
+driver.Url; Python
+driver.current_url Ruby
+driver.current_url タイトルを知りたいとき Java
+driver.getTitle(): C#
+driver.Title; Python
+driver.title Ruby
+driver.title ページのソースを取得したいとき Java
+driver.getPageSource(); C#
+driver.PageSource; Python">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-176391443-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<style>
+        
+    :root {
+        --base-font-family: "Noto Sans JP", var(--sys-font-family), var(--zh-font-family), sans-serif;
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap";
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);        
+    }());
+</script>
+
+<script data-ad-client="ca-pub-1181790212301891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hua47fa772a1fabc30e2c132586ca536ef_298603_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://shortbread2329.github.io/">むーさんDiary</a></h1>
+        <h2 class="site-description">プログラミングや一人暮らし向け料理やお菓子作りを中心としたブログを載せていきます。</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>ホーム</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>自己紹介</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>ダークモード</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://shortbread2329.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" style="background-color: #2a9d8f; color: #fff;">
+                プログラミング
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/seleniumwebdriver%E3%83%81%E3%83%BC%E3%83%88%E3%82%B7%E3%83%BC%E3%83%88/">SeleniumWebdriverチートシート</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 09, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="特定のurlでブラウザを起動する">特定のURLでブラウザを起動する</h2>
+<p>Java</p>
+<pre><code>driver.get(&quot;URL&quot;);
+</code></pre><p>C#</p>
+<pre><code>driver.Url = &quot;URL&quot;;
+</code></pre><p>Python</p>
+<pre><code>driver.get(&quot;URL&quot;)
+</code></pre><p>Ruby</p>
+<pre><code>driver.get(&quot;URL&quot;) 
+</code></pre><h2 id="ページ遷移したいとき">ページ遷移したいとき</h2>
+<p>Java</p>
+<pre><code>driver.navigate().to(&quot;URL&quot;);
+</code></pre><p>C#</p>
+<pre><code>driver.Navigate().GoToUrl(&quot;URL&quot;);
+</code></pre><p>Python</p>
+<pre><code>driver.get(&quot;URL&quot;)
+</code></pre><p>Ruby</p>
+<pre><code>driver.navigate.to(&quot;URL&quot;) 
+</code></pre><h2 id="一つ前に戻りたいとき">一つ前に戻りたいとき</h2>
+<p>Java</p>
+<pre><code>driver.navigate().back();
+</code></pre><p>C#</p>
+<pre><code>driver.Navigate().Back();
+</code></pre><p>Python</p>
+<pre><code>driver.back()
+</code></pre><p>Ruby</p>
+<pre><code>driver.navigate.back 
+</code></pre><h2 id="一つ前に進みたいとき">一つ前に進みたいとき</h2>
+<p>Java</p>
+<pre><code>driver.navigate().forward();
+</code></pre><p>C#</p>
+<pre><code>driver.Navigate().Forward();
+</code></pre><p>Python</p>
+<pre><code>driver.forward()
+</code></pre><p>Ruby</p>
+<pre><code>driver.navigate.forward 
+</code></pre><h2 id="ブラウザを更新する">ブラウザを更新する</h2>
+<p>Java</p>
+<pre><code>driver.navigate().refresh();
+</code></pre><p>C#</p>
+<pre><code>driver.Navigate().Refresh();
+</code></pre><p>Python</p>
+<pre><code>driver.refresh()
+</code></pre><p>Ruby</p>
+<pre><code>driver.navigate.refresh
+</code></pre><h2 id="現在のurlを知りたいとき">現在のURLを知りたいとき</h2>
+<p>Java</p>
+<pre><code>driver.getCurrentUrl()
+</code></pre><p>C#</p>
+<pre><code>driver.Url;
+</code></pre><p>Python</p>
+<pre><code>driver.current_url
+</code></pre><p>Ruby</p>
+<pre><code>driver.current_url
+</code></pre><h2 id="タイトルを知りたいとき">タイトルを知りたいとき</h2>
+<p>Java</p>
+<pre><code>driver.getTitle():
+</code></pre><p>C#</p>
+<pre><code>driver.Title;
+</code></pre><p>Python</p>
+<pre><code>driver.title
+</code></pre><p>Ruby</p>
+<pre><code>driver.title
+</code></pre><h2 id="ページのソースを取得したいとき">ページのソースを取得したいとき</h2>
+<p>Java</p>
+<pre><code>driver.getPageSource();
+</code></pre><p>C#</p>
+<pre><code>driver.PageSource;
+</code></pre><p>Python</p>
+<pre><code>driver.page_source
+</code></pre><p>Ruby</p>
+<pre><code>driver.page_source
+</code></pre><h2 id="ウインドウを閉じたいとき">ウインドウを閉じたいとき</h2>
+<p>Java</p>
+<pre><code>driver.close();
+</code></pre><p>C#</p>
+<pre><code>driver.Close();
+</code></pre><p>Python</p>
+<pre><code>driver.close()
+</code></pre><p>Ruby</p>
+<pre><code>driver.close
+</code></pre><h2 id="すべてのウインドウを閉じたいとき">すべてのウインドウを閉じたいとき</h2>
+<p>Java</p>
+<pre><code>driver.quit();
+</code></pre><p>C#</p>
+<pre><code>driver.Quit();
+</code></pre><p>Python</p>
+<pre><code>driver.quit()
+</code></pre><p>Ruby</p>
+<pre><code>driver.quit
+</code></pre><h2 id="ある要素を取得したいとき">ある要素を取得したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.className(&quot;classname&quot;)); //classでの指定
+driver.findElement(By.id(&quot;id&quot;)); //idでの指定
+driver.findElement(By.xpath(&quot;xpath&quot;)); //xpathでの指定
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.ClassName(&quot;classname&quot;)); //classでの指定
+driver.FindElement(By.Id(&quot;id&quot;)); //idでの指定
+driver.FindElement(By.Xpath(&quot;xpath&quot;)); //xpathでの指定
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_class_name(&quot;classname&quot;) # classでの指定
+driver.find_element_by_id(&quot;id&quot;) # idでの指定
+driver.find_element_by_xpath(&quot;xpath&quot;) # xpathでの指定
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:class, &quot;classname&quot;) # classでの指定
+driver.find_element(:id, &quot;id&quot;) # idでの指定
+driver.find_element(:xpath, &quot;xpath&quot;) # xpathでの指定
+</code></pre><h2 id="ある要素をクリックしたいとき">ある要素をクリックしたいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.XPath(&quot;XPATH&quot;)).click();
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.XPath(&quot;XPATH&quot;)).Click();
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_xpath(&quot;XPATH&quot;).click()
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:xpath, &quot;XPATH&quot;).click
+</code></pre><h2 id="ある要素までスクロールしたいとき">ある要素までスクロールしたいとき</h2>
+<p>Java</p>
+<pre><code>WebElement element = driver.findElement(By.id(&quot;ID&quot;));
+Actions actions = new Actions(driver);
+actions.moveToElement(element);
+actions.perform();
+</code></pre><p>C#</p>
+<pre><code>var element = driver.FindElement(By.id(&quot;ID&quot;));
+Actions actions = new Actions(driver);
+actions.MoveToElement(element);
+actions.Perform();
+</code></pre><p>Python</p>
+<pre><code>from selenium.webdriver.common.action_chains import ActionChains
+
+element = driver.find_element_by_id(&quot;ID&quot;)
+actions = ActionChains(driver)
+actions.move_to_element(element)
+actions.perform()
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:id, &quot;ID&quot;).location_once_scrolled_into_view
+</code></pre><h2 id="ドロップダウンを選択したいとき">ドロップダウンを選択したいとき</h2>
+<p>※Select Supportをimportする必要あり。</p>
+<p>Java</p>
+<pre><code>element = driver.findElement(By.xpath(&quot;xpath&quot;));
+Select(element).selectByIndex(indexnum); // indexで選択
+Select(element).selectByValue(&quot;value&quot;); // valueの値
+Select(element).selectByVisibleText(&quot;text&quot;); // 表示テキスト
+</code></pre><p>C#</p>
+<pre><code>element = driver.FindElement(By.Xpath(&quot;xpath&quot;));
+Select(element).SelectByIndex(indexnum); // indexで選択
+Select(element).SelectByValue(&quot;value&quot;); // valueの値
+Select(element).SelectByText(&quot;text&quot;); // 表示テキスト
+</code></pre><p>Python</p>
+<pre><code>element = driver.find_element_by_xpath(&quot;xpath&quot;)
+Select(element).select_by_index(indexnum) # indexで選択
+Select(element).select_by_value(&quot;value&quot;) # valueの値
+Select(element).select_by_visible_text(&quot;text&quot;) # 表示テキスト
+</code></pre><p>Ruby</p>
+<pre><code>element = driver.find_element(:xpath, &quot;xpath&quot;)
+Select(element).select_by(:index, indexnum) # indexで選択
+Select(element).select_by(:value, &quot;value&quot;) # valueの値
+Select(element).select_by(:text, &quot;string&quot;) # 表示テキスト
+</code></pre><h2 id="テキストを入力したいとき">テキストを入力したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.id(&quot;ID&quot;)).sendKeys(&quot;string&quot;);
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.id(&quot;ID&quot;)).SendKeys(&quot;string&quot;);
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_id(&quot;ID&quot;).send_keys(&quot;strings&quot;)
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:id, &quot;ID&quot;).send_keys(&quot;strings&quot;)
+</code></pre><h2 id="テキストを取得したいとき">テキストを取得したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.id(&quot;ID&quot;)).getText();
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.id(&quot;ID&quot;)).Text;
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_id(&quot;ID&quot;).text
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:id, &quot;ID&quot;).text
+</code></pre><h2 id="属性を取得したいとき">属性を取得したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.id(&quot;ID&quot;)).getAttribute(&quot;value&quot;);
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.id(&quot;ID&quot;)).GetAttribute(&quot;value&quot;);
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_id(&quot;ID&quot;).get_attribute(&quot;value&quot;)
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:id, &quot;ID&quot;).attribute(&quot;value&quot;)
+</code></pre><h2 id="アラートをハンドリングしたいとき">アラートをハンドリングしたいとき</h2>
+<p>Java</p>
+<pre><code>driver.switchTo().alert().accept();
+</code></pre><p>C#</p>
+<pre><code>driver.SwitchTo().Alert().Accept();
+</code></pre><p>Python</p>
+<pre><code>Alert(driver).accept()
+</code></pre><p>Ruby</p>
+<pre><code>driver.switch_to.alert.accept
+</code></pre><h2 id="ウインドウサイズを最大にしたいとき">ウインドウサイズを最大にしたいとき</h2>
+<p>Java</p>
+<pre><code>driver.manage().window().maximize();
+</code></pre><p>C#</p>
+<pre><code>driver.Manage().Window().Maximize();
+</code></pre><p>Python</p>
+<pre><code>driver.maximize_window()
+</code></pre><p>Ruby</p>
+<pre><code>driver.manage.window.maximize
+</code></pre><h2 id="要素が表示されているかどうかを判定したいとき">要素が表示されているかどうかを判定したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.xpath(&quot;xpath&quot;)).isDisplayed();
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.Xpath(&quot;xpath&quot;)).Displayed(); 
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_xpath(&quot;xpath&quot;).is_displayed()
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:xpath, &quot;xpath&quot;).displayed?
+</code></pre><h2 id="要素が有効かどうかを判定したいとき">要素が有効かどうかを判定したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.xpath(&quot;xpath&quot;)).isEnabled();
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.Xpath(&quot;xpath&quot;)).Enabled(); 
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_xpath(&quot;xpath&quot;).is_enabled()
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:xpath, &quot;xpath&quot;).enabled?
+</code></pre><h2 id="要素が選択されているかどうかを判定したいとき">要素が選択されているかどうかを判定したいとき</h2>
+<p>Java</p>
+<pre><code>driver.findElement(By.xpath(&quot;xpath&quot;)).isSelected();
+</code></pre><p>C#</p>
+<pre><code>driver.FindElement(By.Xpath(&quot;xpath&quot;)).Selected(); 
+</code></pre><p>Python</p>
+<pre><code>driver.find_element_by_xpath(&quot;xpath&quot;).is_selected()
+</code></pre><p>Ruby</p>
+<pre><code>driver.find_element(:xpath, &quot;xpath&quot;).selected?
+</code></pre><h1 id="おわりに">おわりに</h1>
+<p>間違ったものがあればご指摘頂ければ幸いです。
+要望があれば随時追加していきます。
+他にもみなさんが使うよく使いそうなメソッドがあれば教えてください。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/selenium/">selenium</a>
+        
+            <a href="/tags/selenium-webdriver/">selenium-webdriver</a>
+        
+            <a href="/tags/python/">python</a>
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/c#/">C#</a>
+        
+            <a href="/tags/ruby/">ruby</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed musan</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">関連するコンテンツ</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/">
+        
+        
+            <div class="article-image">
+                <img src="/p/python%E3%81%A7%E8%87%AA%E4%BD%9C%E9%96%A2%E6%95%B0%E3%82%92%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%8C%96%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%8C%96/_hu60257403737ea4c7439040911418b521_352978_74e21778a30d2a9b38972379263d4f52.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-iWFo0jc7uOz0w5&#43;sMLkOpw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">pythonで自作関数をモジュール化・パッケージ化</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%94%A8%E9%80%94%E5%88%A5%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9/_hu322d823fed05bd5856f1c12661203506_367518_57496472494a572c9ad8fec2145f966a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-dwlk7zhTzCEw1BGR3LOENg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用途別、データ分析の考え方</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%BF%E3%81%AEgit%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8D%E3%81%86/_hu60257403737ea4c7439040911418b521_352978_750235d5e4fe163f3cea0c2ab42d3400.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-iWFo0jc7uOz0w5&#43;sMLkOpw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ローカルのみのGitリポジトリをつくろう</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/githubpage-hugo-%E3%81%A7%E6%9C%80%E5%BC%B7%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%861/3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GitHubPage &#43; Hugo で最強ブログを作ろう(1/3)</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-otiu1ubwtc" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 むーさんDiary
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
