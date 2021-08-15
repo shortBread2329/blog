@@ -1,6 +1,8 @@
 #!/bin/bash
 for ((j=0; j<2; j++)); do
-    TODAY=`date +%Y%m%d --date '${j} day ago'`
+    CMD = "'${j} day ago'"
+    echo $CMD
+    TODAY=`date +%Y%m%d --date $CMD`
     NEWDIR=$TODAY
     # ディレクトリが存在するか
     for ((i=9; i>=0; i--)); do
